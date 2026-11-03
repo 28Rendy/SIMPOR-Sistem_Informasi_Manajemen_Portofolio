@@ -69,7 +69,7 @@
         }
 
         .text-primary {
-            color: {{.' !important'}};
+            color: {{$accentColor.' !important'}};
         }
 
         #navi li a.current {
