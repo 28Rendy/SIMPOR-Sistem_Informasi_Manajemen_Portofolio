@@ -36,14 +36,14 @@ Pengembangan dan modifikasi pada repositori ini dilakukan oleh **Rendy** dengan 
 
 ### 🛠️ Kontribusi & Perubahan yang Dilakukan
 Seluruh hak cipta atas struktur dasar kode, logika bawaan, dan lisensi awal tetap menjadi milik pengembang asli (**arifszn**). Namun, dalam repositori ini, saya telah melakukan beberapa perubahan dan kustomisasi personal, yang meliputi:
-* **Penamaan ulang proyek** dari *Ezfolio* menjadi **SIMPOR** (*Sistem Informasi Manajemen Portofolio*) — mencakup pembaruan nama aplikasi, konfigurasi, dan seluruh referensi terkait.
-* **Lokalisasi penuh ke Bahasa Indonesia** — seluruh antarmuka pengguna (UI) pada tema frontend (*Procyon*, *Rigel*, *Vega*) dan panel admin diterjemahkan ke Bahasa Indonesia, termasuk menu navigasi (*Beranda, Tentang, Layanan, Proyek, Kontak*), label formulir, dan pesan validasi.
-* **Pembaruan halaman autentikasi admin** — judul halaman, placeholder input, dan pesan error pada halaman Login, Lupa Kata Sandi, dan Reset Kata Sandi diubah ke Bahasa Indonesia.
-* **Konfigurasi regional & zona waktu** — `timezone` diubah ke `Asia/Jakarta`, `locale` diubah ke `id` (Indonesia), dan `faker_locale` diubah ke `id_ID` untuk penyesuaian data lokal.
-* **Penambahan file bahasa Indonesia** — menambahkan `resources/lang/id/` beserta file `auth.php`, `pagination.php`, `passwords.php`, dan `validation.php` sebagai dukungan multilingual.
-* **Rename file migrasi ke Bahasa Indonesia** — seluruh 12 file migrasi database diganti namanya menggunakan istilah Bahasa Indonesia (misal: `buat_tabel_pengaturan`, `buat_tabel_admin`, dll) untuk konsistensi penamaan.
-* **Perbaikan teknis: BOM character** — menghapus *Byte Order Mark* (BOM) pada 12 file `app/Services/*.php` yang menyebabkan error `Namespace declaration` pada PHP 8.
-* **Pembaruan dependensi** — memperbarui `composer.lock` agar kompatibel dengan **PHP 8.3** (Laragon) dengan melakukan `composer update`.
+* **Penamaan ulang proyek** dari *Ezfolio* menjadi **SIMPOR** (*Sistem Informasi Manajemen Portofolio*) - mencakup pembaruan nama aplikasi, konfigurasi, dan seluruh referensi terkait.
+* **Lokalisasi penuh ke Bahasa Indonesia** - seluruh antarmuka pengguna (UI) pada tema frontend (*Procyon*, *Rigel*, *Vega*) dan panel admin diterjemahkan ke Bahasa Indonesia, termasuk menu navigasi (*Beranda, Tentang, Layanan, Proyek, Kontak*), label formulir, dan pesan validasi.
+* **Pembaruan halaman autentikasi admin** - judul halaman, placeholder input, dan pesan error pada halaman Login, Lupa Kata Sandi, dan Reset Kata Sandi diubah ke Bahasa Indonesia.
+* **Konfigurasi regional & zona waktu** - `timezone` diubah ke `Asia/Jakarta`, `locale` diubah ke `id` (Indonesia), dan `faker_locale` diubah ke `id_ID` untuk penyesuaian data lokal.
+* **Penambahan file bahasa Indonesia** - menambahkan `resources/lang/id/` beserta file `auth.php`, `pagination.php`, `passwords.php`, dan `validation.php` sebagai dukungan multilingual.
+* **Rename file migrasi ke Bahasa Indonesia** - seluruh 12 file migrasi database diganti namanya menggunakan istilah Bahasa Indonesia (misal: `buat_tabel_pengaturan`, `buat_tabel_admin`, dll) untuk konsistensi penamaan.
+* **Perbaikan teknis: BOM character** - menghapus *Byte Order Mark* (BOM) pada 12 file `app/Services/*.php` yang menyebabkan error `Namespace declaration` pada PHP 8.
+* **Pembaruan dependensi** - memperbarui `composer.lock` agar kompatibel dengan **PHP 8.3** (Laragon) dengan melakukan `composer update`.
 
 Saya sangat menghormati hak kekayaan intelektual dan komunitas *open-source*. Oleh karena itu, lisensi asli (`LICENSE`) tetap dipertahankan di dalam repositori ini sebagai bentuk kepatuhan hukum dan etika.
 
