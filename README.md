@@ -1,6 +1,5 @@
 <p align="center">
   <a href="https://github.com/28Rendy/SIMPOR-Sistem_Informasi_Manajemen_Portofolio" target="_blank">
-    <img src="https://arifszn.github.io/ezfolio/img/short-logo.png" alt="SIMPOR" title="SIMPOR" width="80">
   </a>
 </p>
 
