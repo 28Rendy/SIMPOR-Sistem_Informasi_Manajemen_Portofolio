@@ -69,7 +69,16 @@
         }
 
         .text-primary {
-            color: {{$accentColor.' !important'}};
+            color: {{.' !important'}};
+        }
+
+        #navi li a.current {
+            margin-left: 12px !important;
+        }
+        #navi li a.current:after {
+            left: -12px !important;
+            width: 8px !important;
+            height: 2px !important;
         }
     </style>
 </head>

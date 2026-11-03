@@ -286,7 +286,7 @@ class PortfolioSeeder extends Seeder
                 
                 $data = [
                     'name' => 'Rendy 28',
-                    'email' => 'admin@admin.com',
+                    'email' => 'rendy28',
                     'avatar' => 'assets/common/img/avatar/default.png',
                     'cover' => 'assets/common/img/cover/default.png',
                     'phone' => '081234567890',
@@ -312,7 +312,7 @@ class PortfolioSeeder extends Seeder
                         [
                             'title' => 'Mail',
                             'iconClass' => 'far fa-envelope',
-                            'link' => 'mailto:admin@admin.com'
+                            'link' => 'mailto:rendy28@gmail.com'
                         ],
                     ],
                     'seederCV' => 'assets/common/cv/default.pdf',
@@ -324,9 +324,9 @@ class PortfolioSeeder extends Seeder
                     $data = [
                         'institution' => 'Institut Teknologi Bandung',
                         'period' => '2006-2010',
-                        'degree' => 'Sarjana Komputer (S.Kom)',
+                        'degree' => 'D3 Sistem Informasi Akuntansi',
                         'cgpa' => 'IPK 3.85 / 4.00',
-                        'department' => 'Teknik Informatika',
+                        'department' => 'Sistem Informasi Akuntansi',
                         'thesis' => 'Peminatan Rekayasa Perangkat Lunak'
                     ];
                     $education->store($data);

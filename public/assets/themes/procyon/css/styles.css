@@ -1,4 +1,4 @@
-/*!
+﻿/*!
  * Bootstrap v4.3.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 The Bootstrap Authors
  * Copyright 2011-2019 Twitter, Inc.
@@ -8680,13 +8680,13 @@ h1, h2, h3, h4, h5,
       color: #000000; }
       #navi li a.current {
         color: var(--z-accent-color);
-        margin-left: 20px;
+        margin-left: 12px;
         position: relative; }
         #navi li a.current:after {
           position: absolute;
           top: 50%;
-          left: -24px;
-          width: 20px;
+          left: -12px;
+          width: 8px;
           height: 2px;
           content: '';
           -webkit-transform: translateY(-50%);
@@ -9670,3 +9670,4 @@ textarea.form-control {
   100% {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
+
