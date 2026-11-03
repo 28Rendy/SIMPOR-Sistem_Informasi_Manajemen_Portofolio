@@ -322,17 +322,17 @@ class PortfolioSeeder extends Seeder
                 //education table seed
                 try {
                     $data = [
-                        'institution' => 'Institut Teknologi Bandung',
+                        'institution' => 'Universitas Bina Sarana Informatika',
                         'period' => '2006-2010',
                         'degree' => 'D3 Sistem Informasi Akuntansi',
-                        'cgpa' => 'IPK 3.85 / 4.00',
+                        'cgpa' => 'IPK 3.97 / 4.00',
                         'department' => 'Sistem Informasi Akuntansi',
-                        'thesis' => 'Peminatan Rekayasa Perangkat Lunak'
+                        'thesis' => '-'
                     ];
                     $education->store($data);
 
                     $data = [
-                        'institution' => 'SMA Negeri 1',
+                        'institution' => 'SMK Negeri 02 slawi',
                         'period' => '2002-2006',
                         'degree' => 'Jurusan IPA',
                         'cgpa' => 'Nilai Rata-rata 88.5',

@@ -74,7 +74,7 @@ class AboutService implements AboutInterface
         try {
             $validate = Validator::make($data, [
                 'name' => 'required|string',
-                'email' => 'required|email'
+                'email' => 'required'
             ]);
 
             if ($validate->fails()) {
