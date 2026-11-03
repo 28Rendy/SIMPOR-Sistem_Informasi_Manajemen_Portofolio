@@ -285,8 +285,8 @@ class PortfolioSeeder extends Seeder
                 }
                 
                 $data = [
-                    'name' => 'Budi Santoso',
-                    'email' => 'budi.santoso@example.com',
+                    'name' => 'Rendy 28',
+                    'email' => 'admin@admin.com',
                     'avatar' => 'assets/common/img/avatar/default.png',
                     'cover' => 'assets/common/img/cover/default.png',
                     'phone' => '081234567890',
@@ -302,7 +302,7 @@ class PortfolioSeeder extends Seeder
                         [
                             'title' => 'Github',
                             'iconClass' => 'fab fa-github',
-                            'link' => 'https://github.com'
+                            'link' => 'https://github.com/28Rendy'
                         ],
                         [
                             'title' => 'Twitter',
@@ -312,7 +312,7 @@ class PortfolioSeeder extends Seeder
                         [
                             'title' => 'Mail',
                             'iconClass' => 'far fa-envelope',
-                            'link' => 'mailto:budi.santoso@example.com'
+                            'link' => 'mailto:admin@admin.com'
                         ],
                     ],
                     'seederCV' => 'assets/common/cv/default.pdf',

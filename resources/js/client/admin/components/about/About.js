@@ -85,7 +85,7 @@ const About = () => {
     const [taglines, setTagLines] = useState([]);
     const [socialLinks, setSocialLinks] = useState([]);
     
-    const [focusTagline / Slogan, setFocusTagline / Slogan] = useState(false);
+    const [focusTaglineSlogan, setFocusTaglineSlogan] = useState(false);
     const [focusSocialLinks, setFocusSocialLinks] = useState(false);
 
     const [componentLoading, setComponentLoading] = useState(true);
@@ -132,12 +132,12 @@ const About = () => {
     }, [componentLoading, taglines])
 
     useEffect(() => {
-        if (focusTagline / Slogan === true) {
+        if (focusTaglineSlogan === true) {
             setTimeout(() => {
-                setFocusTagline / Slogan(false);
+                setFocusTaglineSlogan(false);
             }, 900);
         }
-    }, [focusTagline / Slogan]);
+    }, [focusTaglineSlogan]);
 
     useEffect(() => {
         if (focusSocialLinks === true) {
@@ -195,7 +195,7 @@ const About = () => {
         } else if (input === 'description') {
             descriptionInput.current.focus();
         } else if (input === 'taglines') {
-            setFocusTagline / Slogan(true);
+            setFocusTaglineSlogan(true);
             taglinesInput.current.focus();
         }  else if (input === 'socialLinks') {
             setFocusSocialLinks(true);
@@ -541,7 +541,7 @@ const About = () => {
                             >
                                 <Input.TextArea rows="4" ref={descriptionInput} placeholder="Deskripsi diri"/>
                             </Form.Item>
-                            <AnimatedDiv animate={focusTagline / Slogan} ref={taglinesInput} tabIndex="-1">
+                            <AnimatedDiv animate={focusTaglineSlogan} ref={taglinesInput} tabIndex="-1">
                                 <Form.Item
                                     label={<Text strong>
                                             Tagline / Slogan
@@ -696,3 +696,4 @@ const About = () => {
 }
 
 export default About;
+
