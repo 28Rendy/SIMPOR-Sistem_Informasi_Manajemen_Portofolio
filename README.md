@@ -15,12 +15,7 @@
 
 <br/>
 
-<p align="center">
-    <a href="https://arifszn.github.io/ezfolio">
-        <img src="https://arifszn.github.io/ezfolio/img/assets/preview.gif" alt="Cover"/>
-    </a>
-    <br/>
-</p>
+
 
 ---
 
