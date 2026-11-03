@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import ZTabs from '../ZTabs';
 import Icon from '@ant-design/icons';
 import Basic from './Basic';
@@ -42,17 +42,17 @@ const PortfolioConfig = () => {
     const tabs = [
         {
             key: 'basic',
-            title: <React.Fragment><Icon component={AiOutlineControl}/> Basic</React.Fragment>,
+            title: <React.Fragment><Icon component={AiOutlineControl}/> Dasar</React.Fragment>,
             content: <Basic mountedCallBack={() => setTriggerLoadConfig(triggerLoadConfig + 1)} config={config}/>
         },
         {
             key: 'visibility',
-            title: <React.Fragment><Icon component={BiMenu}/> Visibility</React.Fragment>,
+            title: <React.Fragment><Icon component={BiMenu}/> Visibilitas</React.Fragment>,
             content: <Visibility mountedCallBack={() => setTriggerLoadConfig(triggerLoadConfig + 1)} config={config}/>
         },
         {
             key: 'custom-script',
-            title: <React.Fragment><Icon component={BiCodeAlt}/> Custom Script</React.Fragment>,
+            title: <React.Fragment><Icon component={BiCodeAlt}/> Skrip Kustom</React.Fragment>,
             content: <CustomScript mountedCallBack={() => setTriggerLoadConfig(triggerLoadConfig + 1)} config={config}/>
         },
     ]

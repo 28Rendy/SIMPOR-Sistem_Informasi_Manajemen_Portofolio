@@ -42,13 +42,13 @@ class ProjectService implements ProjectInterface
             $result = $this->model->select($select)->get();
             if ($result) {
                 return [
-                    'message' => 'Data is fetched successfully',
+                    'message' => 'Data berhasil diambil',
                     'payload' => $result,
                     'status' => CoreConstants::STATUS_CODE_SUCCESS
                 ];
             } else {
                 return [
-                    'message' => 'No result found',
+                    'message' => 'Data tidak ditemukan',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_NOT_FOUND
                 ];
@@ -56,7 +56,7 @@ class ProjectService implements ProjectInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -88,7 +88,7 @@ class ProjectService implements ProjectInterface
 
             if ($validate->fails()) {
                 return [
-                    'message' => 'Validation Error',
+                    'message' => 'Kesalahan Validasi',
                     'payload' => $validate->errors(),
                     'status' => CoreConstants::STATUS_CODE_BAD_REQUEST
                 ];
@@ -147,13 +147,13 @@ class ProjectService implements ProjectInterface
 
             if ($result) {
                 return [
-                    'message' => isset($data['id']) ? 'Data is successfully updated' : 'Data is successfully saved',
+                    'message' => isset($data['id']) ? 'Data berhasil diperbarui' : 'Data berhasil disimpan',
                     'payload' => $result,
                     'status' => CoreConstants::STATUS_CODE_SUCCESS
                 ];
             } else {
                 return [
-                    'message' => 'Something went wrong',
+                    'message' => 'Terjadi kesalahan sistem',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_ERROR
                 ];
@@ -161,7 +161,7 @@ class ProjectService implements ProjectInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -197,7 +197,7 @@ class ProjectService implements ProjectInterface
             }
             if ($file->move($pathName, $fileName)) {
                 return [
-                    'message' => 'File is successfully saved',
+                    'message' => 'Berkas berhasil disimpan',
                     'payload' => [
                         'file' => $pathName.$fileName
                     ],
@@ -205,7 +205,7 @@ class ProjectService implements ProjectInterface
                 ];
             } else {
                 return [
-                    'message' => 'File could not be saved',
+                    'message' => 'Berkas gagal disimpan',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_ERROR
                 ];
@@ -213,7 +213,7 @@ class ProjectService implements ProjectInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status'  => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -263,7 +263,7 @@ class ProjectService implements ProjectInterface
 
             if (count($savedFileArray)) {
                 return [
-                    'message' => 'Files are successfully saved',
+                    'message' => 'Berkas berhasil disimpan',
                     'payload' => [
                         'files' => $savedFileArray
                     ],
@@ -271,7 +271,7 @@ class ProjectService implements ProjectInterface
                 ];
             } else {
                 return [
-                    'message' => 'No file could not be saved',
+                    'message' => 'Berkas tidak dapat disimpan',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_ERROR
                 ];
@@ -279,7 +279,7 @@ class ProjectService implements ProjectInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status'  => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -300,13 +300,13 @@ class ProjectService implements ProjectInterface
             
             if ($data) {
                 return [
-                    'message' => 'Data is fetched successfully',
+                    'message' => 'Data berhasil diambil',
                     'payload' => $data,
                     'status' => CoreConstants::STATUS_CODE_SUCCESS
                 ];
             } else {
                 return [
-                    'message' => 'No result is found',
+                    'message' => 'Data tidak ditemukan',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_NOT_FOUND
                 ];
@@ -314,7 +314,7 @@ class ProjectService implements ProjectInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -366,13 +366,13 @@ class ProjectService implements ProjectInterface
             
             if ($result) {
                 return [
-                    'message' => 'Data is fetched successfully',
+                    'message' => 'Data berhasil diambil',
                     'payload' => $result,
                     'status' => CoreConstants::STATUS_CODE_SUCCESS
                 ];
             } else {
                 return [
-                    'message' => 'No result found',
+                    'message' => 'Data tidak ditemukan',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_NOT_FOUND
                 ];
@@ -380,7 +380,7 @@ class ProjectService implements ProjectInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -425,7 +425,7 @@ class ProjectService implements ProjectInterface
 
             if ($deleted) {
                 return [
-                    'message' => 'Data is deleted successfully',
+                    'message' => 'Data berhasil dihapus',
                     'payload' => [
                         'totalDeleted' => $deleted
                     ],
@@ -433,7 +433,7 @@ class ProjectService implements ProjectInterface
                 ];
             } else {
                 return [
-                    'message' => 'Nothing to Delete',
+                    'message' => 'Tidak ada data untuk dihapus',
                     'payload' => null,
                     'status'  => CoreConstants::STATUS_CODE_NOT_FOUND
                 ];
@@ -441,7 +441,7 @@ class ProjectService implements ProjectInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];

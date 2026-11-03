@@ -1,4 +1,4 @@
-import { Button, Col, Empty, Form, Input, List, Row, Space, Typography } from 'antd';
+﻿import { Button, Col, Empty, Form, Input, List, Row, Space, Typography } from 'antd';
 import React, { useEffect, useRef, useState } from 'react';
 import styled, { keyframes, css } from 'styled-components';
 import HTTP from '../../../common/helpers/HTTP';
@@ -85,7 +85,7 @@ const About = () => {
     const [taglines, setTagLines] = useState([]);
     const [socialLinks, setSocialLinks] = useState([]);
     
-    const [focusTaglines, setFocusTaglines] = useState(false);
+    const [focusTagline / Slogan, setFocusTagline / Slogan] = useState(false);
     const [focusSocialLinks, setFocusSocialLinks] = useState(false);
 
     const [componentLoading, setComponentLoading] = useState(true);
@@ -132,12 +132,12 @@ const About = () => {
     }, [componentLoading, taglines])
 
     useEffect(() => {
-        if (focusTaglines === true) {
+        if (focusTagline / Slogan === true) {
             setTimeout(() => {
-                setFocusTaglines(false);
+                setFocusTagline / Slogan(false);
             }, 900);
         }
-    }, [focusTaglines]);
+    }, [focusTagline / Slogan]);
 
     useEffect(() => {
         if (focusSocialLinks === true) {
@@ -195,7 +195,7 @@ const About = () => {
         } else if (input === 'description') {
             descriptionInput.current.focus();
         } else if (input === 'taglines') {
-            setFocusTaglines(true);
+            setFocusTagline / Slogan(true);
             taglinesInput.current.focus();
         }  else if (input === 'socialLinks') {
             setFocusSocialLinks(true);
@@ -393,7 +393,7 @@ const About = () => {
                             <Item>
                                 <Item.Meta title={
                                     <React.Fragment>
-                                        Taglines
+                                        Tagline / Slogan
                                         <EditSpan onClick={() => {focusInput('taglines')}}>
                                             <i className="fa fa-pencil-alt" title="Edit"></i>
                                         </EditSpan>
@@ -407,7 +407,7 @@ const About = () => {
                             <Item>
                                 <Item.Meta title={
                                     <React.Fragment>
-                                        Social Links
+                                        Media Sosial
                                         <EditSpan onClick={() => {focusInput('socialLinks')}}>
                                             <i className="fa fa-pencil-alt" title="Edit"></i>
                                         </EditSpan>
@@ -444,7 +444,7 @@ const About = () => {
                             <Item>
                                 <Item.Meta title={
                                     <React.Fragment>
-                                        Cover Photo
+                                        Foto Sampul
                                     </React.Fragment>
                                 } description={
                                     <FileUploader
@@ -486,16 +486,16 @@ const About = () => {
                         >
                             <Form.Item
                                 name="name"
-                                label={<Text strong>Full Name</Text>}
+                                label={<Text strong>Nama Lengkap</Text>}
                                 messageVariables={{ label: 'Name' }}
                                 rules={[
                                     {
                                         required: true,
-                                        message: 'Please enter your name'
+                                        message: 'Silakan masukkan nama Anda'
                                     },
                                 ]}
                             >
-                                <Input ref={nameInput} placeholder="Full Name"/>
+                                <Input ref={nameInput} placeholder="Nama Lengkap"/>
                             </Form.Item>
                             <Form.Item
                                 name="email"
@@ -504,7 +504,7 @@ const About = () => {
                                 rules={[
                                     {
                                         required: true,
-                                        message: 'Please enter your email'
+                                        message: 'Silakan masukkan alamat email Anda'
                                     },
                                     {
                                         type: 'email',
@@ -516,35 +516,35 @@ const About = () => {
                             </Form.Item>
                             <Form.Item
                                 name="phone"
-                                label={<Text strong>Phone</Text>}
+                                label={<Text strong>Nomor Telepon</Text>}
                                 messageVariables={{ label: 'Phone' }}
                             >
-                                <Input ref={phoneInput} placeholder="Phone"/>
+                                <Input ref={phoneInput} placeholder="Nomor Telepon"/>
                             </Form.Item>
                             <Form.Item
                                 name="address"
-                                label={<Text strong>Address</Text>}
+                                label={<Text strong>Alamat</Text>}
                                 messageVariables={{ label: 'Address' }}
                             >
-                                <Input ref={addressInput} placeholder="Address"/>
+                                <Input ref={addressInput} placeholder="Alamat"/>
                             </Form.Item>
                             <Form.Item
                                 name="description"
-                                label={<Text strong>Description</Text>}
+                                label={<Text strong>Deskripsi</Text>}
                                 messageVariables={{ label: 'Description' }}
                                 rules={[
                                     {
                                         required: true,
-                                        message: 'Please enter your description'
+                                        message: 'Silakan masukkan deskripsi Anda'
                                     }
                                 ]}
                             >
-                                <Input.TextArea rows="4" ref={descriptionInput} placeholder="Description"/>
+                                <Input.TextArea rows="4" ref={descriptionInput} placeholder="Deskripsi diri"/>
                             </Form.Item>
-                            <AnimatedDiv animate={focusTaglines} ref={taglinesInput} tabIndex="-1">
+                            <AnimatedDiv animate={focusTagline / Slogan} ref={taglinesInput} tabIndex="-1">
                                 <Form.Item
                                     label={<Text strong>
-                                            Taglines
+                                            Tagline / Slogan
                                             <EditSpan onClick={taglineNewHandler}>
                                                 <i className="fa fa-plus" title="Edit"></i>
                                             </EditSpan>
@@ -569,7 +569,7 @@ const About = () => {
                                                                     ]
                                                                 }>
                                                                     <Item.Meta description={
-                                                                        <Input placeholder="Enter tag line" value={item} bordered={false} onChange={(e) => taglineEditHandler(e, index)}/>
+                                                                        <Input placeholder="Masukkan tagline/slogan" value={item} bordered={false} onChange={(e) => taglineEditHandler(e, index)}/>
                                                                     }/>
                                                                 </List.Item>
                                                             </div>
@@ -586,7 +586,7 @@ const About = () => {
                             <AnimatedDiv animate={focusSocialLinks} ref={socialLinksInput} tabIndex="-1">
                                 <Form.Item
                                     label={<Text strong>
-                                            Social Links
+                                            Media Sosial
                                             <EditSpan onClick={socialLinksNewHandler}>
                                                 <i className="fa fa-plus" title="Edit"></i>
                                             </EditSpan>
@@ -662,7 +662,7 @@ const About = () => {
             {
                 socialLinkPopupVisible && (
                     <SocialLinkPopup
-                        title={'Social Link'}
+                        title={'Media Sosial'}
                         socialLink={socialLinkToEdit}
                         visible={socialLinkPopupVisible}
                         handleCancel={

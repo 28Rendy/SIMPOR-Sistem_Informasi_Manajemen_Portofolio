@@ -79,14 +79,14 @@ class FrontendService implements FrontendInterface
             }
             
             return [
-                'message' => 'Data is fetched successfully',
+                'message' => 'Data berhasil diambil',
                 'payload' => $data,
                 'status' => CoreConstants::STATUS_CODE_SUCCESS
             ];
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status'  => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -105,7 +105,7 @@ class FrontendService implements FrontendInterface
 
             if ($result['status'] === CoreConstants::STATUS_CODE_SUCCESS) {
                 return [
-                    'message' => 'Projects are fetched successfully',
+                    'message' => 'Data proyek berhasil diambil',
                     'payload' => $result['payload'],
                     'status' => CoreConstants::STATUS_CODE_SUCCESS
                 ];
@@ -115,7 +115,7 @@ class FrontendService implements FrontendInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status'  => CoreConstants::STATUS_CODE_ERROR
             ];

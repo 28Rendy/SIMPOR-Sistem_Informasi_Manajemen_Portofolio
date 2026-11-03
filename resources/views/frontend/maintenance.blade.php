@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Closed for maintenance</title>
+    <title>Sedang Dalam Pemeliharaan</title>
     <link rel="shortcut icon" id="favicon" type="image/x-icon"  href="{{ Utils::getFavicon() }}">
     <style>
         html, body, .main-wrapper {
@@ -116,7 +116,7 @@
 <body>
     <div class="main-wrapper">
         <div class="signboard-wrapper">
-            <div class="signboard">CLOSED</div>
+            <div class="signboard">PEMELIHARAAN</div>
             <div class="string"></div>
             <div class="pin pin1"></div>
             <div class="pin pin2"></div>

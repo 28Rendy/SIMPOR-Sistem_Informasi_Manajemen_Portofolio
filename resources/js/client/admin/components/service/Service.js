@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { Drawer, Button, Spin, Input, Form } from 'antd';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -130,7 +130,7 @@ const Service = (props) => {
                             },
                         ]}
                     >
-                        <Input placeholder="Enter Title"/>
+                        <Input placeholder="Masukkan Judul"/>
                     </Form.Item>
                     <Form.Item
                         name="icon"
@@ -143,7 +143,7 @@ const Service = (props) => {
                             },
                         ]}
                     >
-                        <Input placeholder="Enter Icon Class"/>
+                        <Input placeholder="Masukkan Kelas Ikon (misal: fas fa-code)"/>
                     </Form.Item>
                     <Form.Item 
                         name="details" 
@@ -155,7 +155,7 @@ const Service = (props) => {
                             },
                         ]}
                     >
-                        <Input.TextArea rows={4} placeholder="Enter Details"/>
+                        <Input.TextArea rows={4} placeholder="Masukkan Detail"/>
                     </Form.Item>
                 </Form>
             </Spin>

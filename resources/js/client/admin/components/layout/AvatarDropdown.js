@@ -1,6 +1,6 @@
-import React from 'react';
+﻿import React from 'react';
 import { Dropdown, Menu, Avatar } from 'antd';
-import { LogoutOutlined, UserOutlined, ProfileOutlined, UnlockOutlined } from '@ant-design/icons';
+import { LogoutOutlined, UserOutlined, ProfilOutlined, UnlockOutlined } from '@ant-design/icons';
 import { useHistory } from 'react-router-dom';
 import Routes from '../../../common/helpers/Routes';
 
@@ -22,16 +22,16 @@ const AvatarDropdown = () => {
     const menuHeaderDropdown = (
         <Menu selectedKeys={[]} onClick={onMenuClick}>
             <Menu.Item key="profile">
-                <ProfileOutlined style={{marginRight: 10}}/>
-                Profile
+                <ProfilOutlined style={{marginRight: 10}}/>
+                Profil
             </Menu.Item>
             <Menu.Item key="password">
                 <UnlockOutlined style={{marginRight: 10}}/>
-                Password
+                Kata Sandi
             </Menu.Item>
             <Menu.Item key="logout">
                 <LogoutOutlined style={{marginRight: 10}}/>
-                Log out
+                Keluar
             </Menu.Item>
         </Menu>
     );

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { Drawer, Button, Spin, Input, Form } from 'antd';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -113,7 +113,7 @@ const SocialLinkPopup = (props) => {
                             },
                         ]}
                     >
-                        <Input placeholder="Enter Title"/>
+                        <Input placeholder="Masukkan Judul"/>
                     </Form.Item>
                     <Form.Item
                         name="iconClass"
@@ -126,7 +126,7 @@ const SocialLinkPopup = (props) => {
                             },
                         ]}
                     >
-                        <Input placeholder="Enter Icon Class"/>
+                        <Input placeholder="Masukkan Kelas Ikon (misal: fas fa-code)"/>
                     </Form.Item>
                     <Form.Item
                         name="link"
@@ -142,7 +142,7 @@ const SocialLinkPopup = (props) => {
                             },
                         ]}
                     >
-                        <Input placeholder="Enter Link"/>
+                        <Input placeholder="Masukkan Tautan"/>
                     </Form.Item>
                 </Form>
             </Spin>

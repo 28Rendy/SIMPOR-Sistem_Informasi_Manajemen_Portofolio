@@ -28,7 +28,7 @@ class PortfolioSeeder extends Seeder
     public function run()
     {
         try {
-            $faker = Faker::create();
+            $faker = Faker::create('id_ID');
 
             $portfolioConfig = resolve(PortfolioConfigInterface::class);
             $about = resolve(AboutInterface::class);
@@ -164,8 +164,8 @@ class PortfolioSeeder extends Seeder
             //meta title
             $data = [
                 'setting_key' => CoreConstants::PORTFOLIO_CONFIG__META_TITLE,
-                'setting_value' => '',
-                'default_value' => '',
+                'setting_value' => 'SIMPOR - Sistem Informasi Manajemen Portofolio',
+                'default_value' => 'SIMPOR - Sistem Informasi Manajemen Portofolio',
             ];
             $portfolioConfig->insertOrUpdate($data);
 
@@ -285,14 +285,14 @@ class PortfolioSeeder extends Seeder
                 }
                 
                 $data = [
-                    'name' => 'John Doe',
-                    'email' => 'johndoe@example.com',
+                    'name' => 'Budi Santoso',
+                    'email' => 'budi.santoso@example.com',
                     'avatar' => 'assets/common/img/avatar/default.png',
                     'cover' => 'assets/common/img/cover/default.png',
-                    'phone' => '12025550191',
-                    'address' => '1609 Nuzum Court, Cheektowaga, NY 14225',
-                    'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non corporis assumenda maiores. Impedit quia necessitatibus adipisci sit quibusdam aspernatur mollitia, deleniti, id, molestiae a accusantium modi sint expedita aliquam labore.',
-                    'taglines' => ["I am Software Engineer", "I am Web Developer", "I am Full Stack Engineer"],
+                    'phone' => '081234567890',
+                    'address' => 'Jl. Jenderal Sudirman No. 45, Jakarta Pusat, DKI Jakarta',
+                    'description' => 'Halo! Saya seorang Software Engineer yang berfokus pada pengembangan aplikasi web modern, cepat, dan handal. Memiliki pengalaman dalam merancang sistem backend dan frontend dengan teknologi terkini.',
+                    'taglines' => ["Saya Software Engineer", "Saya Web Developer", "Saya Full Stack Developer"],
                     'social_links' => [
                         [
                             'title' => 'LinkedIn',
@@ -312,7 +312,7 @@ class PortfolioSeeder extends Seeder
                         [
                             'title' => 'Mail',
                             'iconClass' => 'far fa-envelope',
-                            'link' => 'mailto:johndoe@example.com'
+                            'link' => 'mailto:budi.santoso@example.com'
                         ],
                     ],
                     'seederCV' => 'assets/common/cv/default.pdf',
@@ -322,20 +322,20 @@ class PortfolioSeeder extends Seeder
                 //education table seed
                 try {
                     $data = [
-                        'institution' => 'University of Colorado Boulder',
+                        'institution' => 'Institut Teknologi Bandung',
                         'period' => '2006-2010',
-                        'degree' => 'Bachelor of Science',
-                        'cgpa' => '4.00 out of 4.00',
-                        'department' => 'Computer Science & Engineering',
-                        'thesis' => 'Web Development Track'
+                        'degree' => 'Sarjana Komputer (S.Kom)',
+                        'cgpa' => 'IPK 3.85 / 4.00',
+                        'department' => 'Teknik Informatika',
+                        'thesis' => 'Peminatan Rekayasa Perangkat Lunak'
                     ];
                     $education->store($data);
 
                     $data = [
-                        'institution' => 'James Buchanan High School',
+                        'institution' => 'SMA Negeri 1',
                         'period' => '2002-2006',
-                        'degree' => 'Technology Magnet Program',
-                        'cgpa' => '3.75 out of 4.00',
+                        'degree' => 'Jurusan IPA',
+                        'cgpa' => 'Nilai Rata-rata 88.5',
                         'department' => null,
                         'thesis' => null
                     ];
@@ -409,26 +409,26 @@ class PortfolioSeeder extends Seeder
             //experience table seed
             try {
                 $data = [
-                    'company' => 'ABC LIMITED',
-                    'period' => '2019-Present',
+                    'company' => 'PT Solusi Digital Nusantara',
+                    'period' => '2020 - Sekarang',
                     'position' => 'Senior Software Engineer',
-                    'details' => $faker->text()
+                    'details' => 'Memimpin tim pengembang dalam merancang dan mengimplementasikan arsitektur aplikasi berbasis web skala besar, mengoptimalkan performa sistem, serta mengawasi standar penulisan kode dan alur deployment.'
                 ];
                 $experience->store($data);
 
                 $data = [
-                    'company' => 'ABC LIMITED',
+                    'company' => 'PT Solusi Digital Nusantara',
                     'period' => '2017-2019',
                     'position' => 'Software Engineer',
-                    'details' => $faker->text()
+                    'details' => 'Mengembangkan modul dan fitur baru pada aplikasi web perusahaan menggunakan Laravel dan Vue.js, mengoptimalkan kueri database, serta mengintegrasikan RESTful API pihak ketiga.'
                 ];
                 $experience->store($data);
 
                 $data = [
-                    'company' => 'XYZ LIMITED',
+                    'company' => 'PT Inovasi Teknologi Bangsa',
                     'period' => '2015-2017',
                     'position' => 'Junior Software Engineer',
-                    'details' => $faker->text()
+                    'details' => 'Membantu pengembangan modul frontend dan backend, memperbaiki bug aplikasi, menulis pengujian unit, serta berkolaborasi erat dengan tim desainer UI/UX.'
                 ];
                 $experience->store($data);
             } catch (\Throwable $th) {
@@ -457,10 +457,10 @@ class PortfolioSeeder extends Seeder
                 }
 
                 $data = [
-                    'title' => 'Demo Project 1',
-                    'categories' => ['personal'],
+                    'title' => 'Sistem Manajemen Portofolio',
+                    'categories' => ['pribadi'],
                     'link' => 'https://www.youtube.com',
-                    'details' => $faker->text(),
+                    'details' => 'Platform pengelolaan portofolio digital interaktif yang dilengkapi fitur analisis statistik pengunjung, manajemen proyek, kustomisasi tema, dan penerimaan pesan kontak secara langsung.',
                     'seeder_thumbnail' => 'assets/common/img/projects/demo_project_1_1.png',
                     'seeder_images' => [
                         'assets/common/img/projects/demo_project_1_1.png',
@@ -478,10 +478,10 @@ class PortfolioSeeder extends Seeder
                 $project->store($data);
 
                 $data = [
-                    'title' => 'Demo Project 2',
-                    'categories' => ['professional'],
+                    'title' => 'Aplikasi E-Commerce Terpadu',
+                    'categories' => ['profesional'],
                     'link' => 'https://www.facebook.com',
-                    'details' => $faker->text(),
+                    'details' => 'Aplikasi perdagangan elektronik lengkap dengan integrasi gateway pembayaran, manajemen inventaris produk, pelacakan pengiriman barang, dan panel administrasi yang mudah digunakan.',
                     'seeder_thumbnail' => 'assets/common/img/projects/demo_project_2_1.png',
                     'seeder_images' => [
                         'assets/common/img/projects/demo_project_2_1.png',
@@ -500,10 +500,10 @@ class PortfolioSeeder extends Seeder
                 $project->store($data);
 
                 $data = [
-                    'title' => 'Demo Project 3',
-                    'categories' => ['personal'],
+                    'title' => 'Dashboard Analisis Data',
+                    'categories' => ['pribadi'],
                     'link' => 'https://www.linkedin.com',
-                    'details' => $faker->text(),
+                    'details' => 'Aplikasi dashboard analitik modern untuk visualisasi data bisnis, pemantauan metrik kinerja secara real-time, dan ekspor laporan otomatis.',
                     'seeder_thumbnail' => 'assets/common/img/projects/demo_project_3_1.png',
                     'seeder_images' => [
                         'assets/common/img/projects/demo_project_3_1.png',
@@ -527,23 +527,23 @@ class PortfolioSeeder extends Seeder
             //service table seed
             try {
                 $data = [
-                    'title' => 'Web Development',
+                    'title' => 'Pengembangan Web',
                     'icon' => 'fas fa-code',
-                    'details' => $faker->text()
+                    'details' => 'Membangun aplikasi web kustom yang responsif, cepat, dan aman menggunakan teknologi web modern sesuai kebutuhan Anda.'
                 ];
                 $service->store($data);
 
                 $data = [
-                    'title' => 'UI/UX Design',
+                    'title' => 'Desain UI/UX',
                     'icon' => 'fas fa-basketball-ball',
-                    'details' => $faker->text()
+                    'details' => 'Merancang antarmuka dan pengalaman pengguna yang modern, intuitif, dan menarik demi kenyamanan interaksi pengguna.'
                 ];
                 $service->store($data);
 
                 $data = [
-                    'title' => 'Security',
+                    'title' => 'Keamanan & Optimasi',
                     'icon' => 'fas fa-shield-alt',
-                    'details' => $faker->text()
+                    'details' => 'Meningkatkan kecepatan loading website serta memperkuat keamanan aplikasi dari celah kerentanan dan ancaman siber.'
                 ];
                 $service->store($data);
             } catch (\Throwable $th) {
@@ -560,7 +560,7 @@ class PortfolioSeeder extends Seeder
                         'is_desktop' => $faker->boolean(70),
                         'browser' => $faker->randomElement(['Chrome', 'Firefox', 'Safari', 'Opera', 'Edge']),
                         'platform' => $faker->randomElement(['Windows', 'OS X', 'AndroidOS', 'iOS']),
-                        'location' => $faker->country,
+                        'location' => $faker->randomElement(['Indonesia', 'Malaysia', 'Singapura', 'Jepang', 'Australia', 'Amerika Serikat', 'Jerman', 'Belanda', 'Korea Selatan']),
                         'created_at' => $faker->dateTimeThisMonth()->format('Y-m-d H:i:s'),
                     ];
                     $visitor->forceStore($data);
@@ -571,12 +571,36 @@ class PortfolioSeeder extends Seeder
 
             try {
                 //message table seed
+                $subjects = [
+                    'Tawaran Kerja Sama Proyek Pembuatan Website',
+                    'Pertanyaan Mengenai Jasa Pengembangan Aplikasi',
+                    'Undangan Menjadi Pembicara Seminar Teknologi',
+                    'Konsultasi Pengembangan Sistem Informasi Perusahaan',
+                    'Peluang Kolaborasi Remote Software Engineer',
+                    'Permintaan Penawaran Harga Pembuatan Aplikasi Web',
+                    'Tanya Jawab Seputar Layanan Desain UI/UX',
+                    'Konsultasi Optimasi dan Keamanan Sistem Web',
+                    'Diskusi Proyek Aplikasi E-Commerce',
+                    'Pertanyaan Terkait Portofolio dan Pengalaman Kerja',
+                ];
+
+                $bodies = [
+                    'Halo, saya melihat portofolio Anda dan sangat tertarik dengan hasil karya yang Anda buat. Apakah saat ini Anda bersedia menerima proyek pembuatan website baru?',
+                    'Selamat siang, kami dari tim pengembangan startup ingin mengajak Anda berdiskusi terkait arsitektur sistem web kami.',
+                    'Halo, kami sangat terkesan dengan rekam jejak Anda. Apakah Anda tertarik untuk membahas peluang karier sebagai Senior Developer bersama tim kami?',
+                    'Selamat pagi, perusahaan kami berencana merombak sistem informasi internal. Bisakah kami mendapatkan estimasi waktu dan biaya untuk pengerjaan proyek tersebut?',
+                    'Halo, saya ingin berkonsultasi mengenai kebutuhan audit keamanan dan peningkatan kecepatan akses pada platform toko online kami.',
+                    'Selamat sore, kami membutuhkan jasa pembuatan tampilan antarmuka (UI/UX) untuk aplikasi web kami. Apakah Anda dapat mengirimkan penawaran harga?',
+                    'Halo, salam kenal! Apakah Anda memiliki waktu luang minggu ini untuk mengadakan diskusi daring singkat mengenai kerja sama proyek baru?',
+                    'Selamat siang, kami ingin mendiskusikan integrasi sistem pembayaran otomatis untuk website klien kami. Mohon informasi lebih lanjut.',
+                ];
+
                 foreach (range(1, 17) as $index) {
                     $data = [
                         'name' => $faker->name(),
                         'email' => $faker->email,
-                        'subject' => $faker->sentence(),
-                        'body' => $faker->text(),
+                        'subject' => $faker->randomElement($subjects),
+                        'body' => $faker->randomElement($bodies),
                         'replied' => $faker->boolean(60),
                         'created_at' => $faker->dateTimeThisMonth()->format('Y-m-d H:i:s'),
                     ];

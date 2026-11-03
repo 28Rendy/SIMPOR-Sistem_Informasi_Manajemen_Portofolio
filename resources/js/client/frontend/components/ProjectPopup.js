@@ -61,13 +61,13 @@ const ProjectPopup = (props) => {
                     }}
                 >
                     <Button disabled={componentLoading} onClick={handleClose} style={{ marginRight: 8 }}>
-                        Close
+                        Tutup
                     </Button>
                 </div>
             }
         >
             <Spin spinning={componentLoading} size="large" delay={500}>
-                <StyledTitle>Images</StyledTitle>
+                <StyledTitle>Gambar</StyledTitle>
                 <Row>
                     <Col span={24}>
                         <Carousel autoplay pauseOnHover={false}>
@@ -92,7 +92,7 @@ const ProjectPopup = (props) => {
                     </Col>
                 </Row>
                 <Divider />
-                <StyledTitle>Category</StyledTitle>
+                <StyledTitle>Kategori</StyledTitle>
                 <Row>
                     <Col span={24}>
                         {
@@ -106,7 +106,7 @@ const ProjectPopup = (props) => {
                     (props.project.details !== null) && props.project.details !== '' && (
                         <React.Fragment>
                             <Divider/>
-                            <StyledTitle>Description</StyledTitle>
+                            <StyledTitle>Deskripsi</StyledTitle>
                             <Row>
                                 <Col span={24}>
                                     {props.project.details}
@@ -119,7 +119,7 @@ const ProjectPopup = (props) => {
                     props.project.link && props.project.link !== '' && (
                         <React.Fragment>
                             <Divider/>
-                            <StyledTitle>Link</StyledTitle>
+                            <StyledTitle>Tautan</StyledTitle>
                             <Row>
                                 <Col span={24}>
                                     <a href={props.project.link} target="_blank" rel="noreferrer">

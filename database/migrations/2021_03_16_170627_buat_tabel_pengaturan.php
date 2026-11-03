@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePortfolioConfigsTable extends Migration
+class BuatTabelPengaturan extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreatePortfolioConfigsTable extends Migration
      */
     public function up()
     {
-        Schema::create('portfolio_configs', function (Blueprint $table) {
+        Schema::create('settings', function (Blueprint $table) {
             $table->id();
             $table->integer('setting_key');
             $table->longText('setting_value');
@@ -29,6 +29,6 @@ class CreatePortfolioConfigsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('portfolio_configs');
+        Schema::dropIfExists('settings');
     }
 }

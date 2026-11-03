@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { Drawer, Button, Spin, Input, Form } from 'antd';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -136,22 +136,22 @@ const Education = (props) => {
                             },
                         ]}
                     >
-                        <Input placeholder="Enter Institution"/>
+                        <Input placeholder="Masukkan Nama Institusi"/>
                     </Form.Item>
                     <Form.Item name="period" label="Period">
-                        <Input placeholder="Enter Period"/>
+                        <Input placeholder="Masukkan Periode (contoh: 2018 - 2022)"/>
                     </Form.Item>
                     <Form.Item name="degree" label="Degree">
-                        <Input placeholder="Enter Degree"/>
+                        <Input placeholder="Masukkan Jenjang/Gelar (contoh: S1 Komputer)"/>
                     </Form.Item>
                     <Form.Item name="cgpa" label="CGPA">
-                        <Input placeholder="Enter CGPA"/>
+                        <Input placeholder="Masukkan IPK"/>
                     </Form.Item>
                     <Form.Item name="department" label="Department">
-                        <Input placeholder="Enter Department"/>
+                        <Input placeholder="Masukkan Jurusan"/>
                     </Form.Item>
                     <Form.Item name="thesis" label="Thesis">
-                        <Input placeholder="Enter Thesis"/>
+                        <Input placeholder="Masukkan Judul Skripsi / Tesis"/>
                     </Form.Item>
                 </Form>
             </Spin>

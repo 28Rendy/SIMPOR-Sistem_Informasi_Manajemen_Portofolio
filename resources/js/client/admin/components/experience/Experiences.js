@@ -1,4 +1,4 @@
-import { Button, Menu, PageHeader, Space, Dropdown, Modal, Typography } from 'antd';
+﻿import { Button, Menu, PageHeader, Space, Dropdown, Modal, Typography } from 'antd';
 import React, { useRef, useState } from 'react';
 import PageWrapper from '../layout/PageWrapper';
 import ProTable from '@ant-design/pro-table';
@@ -18,7 +18,7 @@ const Experiences = () => {
 
     const columns = [
         {
-            title: 'Company',
+            title: 'Perusahaan',
             dataIndex: 'company',
             search: true,
             sorter: true,
@@ -26,7 +26,7 @@ const Experiences = () => {
             ellipsis:true
         },
         {
-            title: 'Period',
+            title: 'Periode',
             dataIndex: 'period',
             sorter: true,
             search: true,
@@ -34,7 +34,7 @@ const Experiences = () => {
             ellipsis:true
         },
         {
-            title: 'Position',
+            title: 'Posisi',
             dataIndex: 'position',
             sorter: true,
             search: true,
@@ -42,7 +42,7 @@ const Experiences = () => {
             ellipsis:true
         },
         {
-            title: 'Details',
+            title: 'Detail',
             dataIndex: 'details',
             sorter: true,
             search: true,
@@ -50,7 +50,7 @@ const Experiences = () => {
             hideInTable: true
         },
         {
-            title: 'Option',
+            title: 'Aksi',
             valueType: 'option',
             align: 'center',
             width: 170,
@@ -58,7 +58,7 @@ const Experiences = () => {
             render: (text, row) => [
                 <Dropdown key="0" overlay={menu(row)} trigger={['click']}>
                     <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
-                        Option <DownOutlined />
+                        Aksi <DownOutlined />
                     </a>
                 </Dropdown>,
             ],
@@ -72,7 +72,7 @@ const Experiences = () => {
         });
         confirm({
             confirmLoading: loading,
-            title: `Do you want to delete ${ids.length == 1 ? 'this' : 'these'} ${ids.length == 1 ? 'item' : 'items'}?`,
+            title: `Apakah Anda yakin ingin menghapus ${ids.length == 1 ? 'data ini' : 'data yang dipilih'}?`,
             icon: <ExclamationCircleOutlined />,
             mask: true,
             onOk() {
@@ -159,21 +159,21 @@ const Experiences = () => {
                         tableAlertRender={({ selectedRowKeys, onCleanSelected }) => (
                             <Space>
                                 <span>
-                                    Selected {selectedRowKeys.length} items
+                                    Terpilih {selectedRowKeys.length} data
                                     <a
                                         style={{
                                             marginLeft: 8,
                                         }}
                                         onClick={onCleanSelected}
                                     >
-                                        <strong>Cancel Selection</strong>
+                                        <strong>Batalkan Pilihan</strong>
                                     </a>
                                 </span>
                             </Space>
                         )}
                         tableAlertOptionRender={({ selectedRows }) => (
                             <Space>
-                                <Button type="primary" onClick={() => showConfirm(selectedRows)}>Batch Deletion</Button>
+                                <Button type="primary" onClick={() => showConfirm(selectedRows)}>Hapus Sekaligus</Button>
                             </Space>
                         )}
                         actionRef={actionRef}

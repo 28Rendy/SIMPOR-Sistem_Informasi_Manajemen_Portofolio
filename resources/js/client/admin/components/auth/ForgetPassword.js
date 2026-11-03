@@ -1,4 +1,4 @@
-import { Button, Space, Form, Input } from 'antd';
+﻿import { Button, Space, Form, Input } from 'antd';
 import React, { useEffect, useState } from 'react';
 import { AiOutlineMail } from 'react-icons/ai';
 import AuthLayout from './AuthLayout';
@@ -15,7 +15,7 @@ const ForgetPassword = () => {
     let location = useLocation();
 
     useEffect(() => {
-        document.title = `Forget Password - ${siteName}`;
+        document.title = `Lupa Kata Sandi - ${siteName}`;
     }, [])
 
     useEffect(() => {
@@ -27,7 +27,7 @@ const ForgetPassword = () => {
 
     const onSubmit = (values) => {
         if (demoMode) {
-            Utils.showNotification('This feature is not available in Demo', 'warning');
+            Utils.showNotification('Fitur ini tidak tersedia dalam mode Demo', 'warning');
             return;
         }
         setLoading(true);
@@ -50,7 +50,7 @@ const ForgetPassword = () => {
 
     return (
         <React.Fragment>
-            <AuthLayout title={'FORGET PASSWORD'}>
+            <AuthLayout title={'LUPA KATA SANDI'}>
                 <Form
                     name="forgetPassword"
                     onFinish={onSubmit}
@@ -60,11 +60,11 @@ const ForgetPassword = () => {
                         rules={[
                             {
                                 required: true,
-                                message: 'Please enter your email'
+                                message: 'Silakan masukkan email Anda'
                             },
                             {
                                 type: 'email',
-                                message: 'Invalid email address'
+                                message: 'Format alamat email tidak valid'
                             }
                         ]}
                     >
@@ -77,7 +77,7 @@ const ForgetPassword = () => {
                             </Button>
                             
                             <Button type="default" htmlType="button" block disabled={loading}>
-                                <Link to={Routes.web.admin.login}>Back to Login</Link>
+                                <Link to={Routes.web.admin.login}>Kembali ke Masuk</Link>
                             </Button>
                         </Space>
                     </Form.Item>

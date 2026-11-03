@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import ZTabs from '../ZTabs';
 import General from './General';
 import Icon from '@ant-design/icons';
@@ -12,17 +12,17 @@ import PageWrapper from '../layout/PageWrapper';
 const tabs = [
     {
         key: 'general-settings',
-        title: <React.Fragment><Icon component={AiOutlineSetting}/> General Settings</React.Fragment>,
+        title: <React.Fragment><Icon component={AiOutlineSetting}/> Pengaturan Umum</React.Fragment>,
         content: <General/>
     },
     {
         key: 'themes',
-        title: <React.Fragment><Icon component={IoColorPaletteOutline}/> Theme Settings</React.Fragment>,
+        title: <React.Fragment><Icon component={IoColorPaletteOutline}/> Pengaturan Tema</React.Fragment>,
         content: <Themes/>
     },
     {
         key: 'mail',
-        title: <React.Fragment><Icon component={RiMailSettingsLine}/> Mail Settings</React.Fragment>,
+        title: <React.Fragment><Icon component={RiMailSettingsLine}/> Pengaturan Email</React.Fragment>,
         content: <Mail/>
     }
 ]

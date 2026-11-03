@@ -1,4 +1,4 @@
-import { PageHeader, Form, Spin, Input, Select, Button, Typography } from 'antd';
+﻿import { PageHeader, Form, Spin, Input, Select, Button, Typography } from 'antd';
 import React, { useEffect, useState } from 'react';
 import { InfoCircleOutlined } from '@ant-design/icons';
 import HTTP from '../../../common/helpers/HTTP';
@@ -75,13 +75,13 @@ const Mail = () => {
     return (
         <React.Fragment>
             <PageHeader
-                title="Mail Settings"
+                title="Pengaturan Email"
                 subTitle={
                     <Typography.Text
                         style={{ width: '100%', color: 'grey' }}
-                        ellipsis={{ tooltip: 'Optional and needed for password recovery mail' }}
+                        ellipsis={{ tooltip: 'Opsional, diperlukan untuk email pemulihan kata sandi' }}
                     >
-                        Optional and needed for password recovery mail
+                        Opsional, diperlukan untuk email pemulihan kata sandi
                     </Typography.Text>
                 }
             >
@@ -170,7 +170,7 @@ const Mail = () => {
                         </Form.Item>
                         <Form.Item
                             name="MAIL_FROM_ADDRESS"
-                            label="Sender Email"
+                            label="Email Pengirim"
                             rules={[
                                 {
                                     type: 'email',
@@ -179,17 +179,17 @@ const Mail = () => {
                             ]}
                             tooltip={{ title: 'Sender email to be displayed on the mail', icon: <InfoCircleOutlined /> }}
                         >
-                            <Input placeholder="Sender Email"/>
+                            <Input placeholder="Email Pengirim"/>
                         </Form.Item>
                         <Form.Item
                             name="MAIL_FROM_NAME"
-                            label="Sender Name"
+                            label="Nama Pengirim"
                             rules={[
                                 
                             ]}
                             tooltip={{ title: 'Sender name to be displayed on the mail', icon: <InfoCircleOutlined /> }}
                         >
-                            <Input placeholder="Sender Name"/>
+                            <Input placeholder="Nama Pengirim"/>
                         </Form.Item>
                         <Form.Item 
                             style={{

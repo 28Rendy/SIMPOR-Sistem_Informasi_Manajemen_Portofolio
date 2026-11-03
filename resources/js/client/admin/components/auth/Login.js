@@ -1,4 +1,4 @@
-import { Button, Divider, Form, Input, Typography } from 'antd';
+﻿import { Button, Divider, Form, Input, Typography } from 'antd';
 import React, { useEffect, useState } from 'react';
 import AuthLayout from './AuthLayout';
 import axios from 'axios';
@@ -19,7 +19,7 @@ const Login = () => {
     const {siteName, apiToken, demoMode} = useSelector(state => state.globalState);
 
     useEffect(() => {
-        document.title = `Login - ${siteName}`;
+        document.title = `Masuk Admin - ${siteName}`;
 
         if (demoMode) {
             form.setFieldsValue({
@@ -61,7 +61,7 @@ const Login = () => {
 
     return (
         <React.Fragment>
-            <AuthLayout title={'ADMIN LOGIN'}>
+            <AuthLayout title={'MASUK ADMIN'}>
                 <Form
                     form={form}
                     name="login"
@@ -73,11 +73,11 @@ const Login = () => {
                         rules={[
                             {
                                 required: true,
-                                message: 'Please enter your email'
+                                message: 'Silakan masukkan email Anda'
                             },
                             {
                                 type: 'email',
-                                message: 'Invalid email address'
+                                message: 'Format alamat email tidak valid'
                             }
                         ]}
                     >
@@ -89,13 +89,13 @@ const Login = () => {
                         rules={[
                             {
                                 required: true,
-                                message: 'Please enter your password'
+                                message: 'Silakan masukkan kata sandi Anda'
                             }
                         ]}
                     >
                         <Input.Password
                             prefix={<BsShieldLock/>}
-                            placeholder="Password"
+                            placeholder="Kata Sandi"
                         />
                     </Form.Item>
                     <Form.Item>
@@ -106,7 +106,7 @@ const Login = () => {
                     <Divider style={{marginBottom: '5px'}}/>
                     <Form.Item className="text-center">
                         <Link to={Routes.web.admin.forgetPassword}>
-                            <Typography.Text type="secondary">Forgot password?</Typography.Text>
+                            <Typography.Text type="secondary">Lupa kata sandi?</Typography.Text>
                         </Link>
                     </Form.Item>
                 </Form>

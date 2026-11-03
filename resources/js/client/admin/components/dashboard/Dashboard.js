@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import moment from 'moment';
 import HTTP from '../../../common/helpers/HTTP';
 import Routes from '../../../common/helpers/Routes';
@@ -255,7 +255,7 @@ const Dashboard = () => {
                                 loading={loading}
                                 icon={<Icon component={GoKeyboard}/>}
                                 color={colors.skill} 
-                                title='Skill' 
+                                title='Keahlian' 
                                 number={skillData.total}
                             />
                         </Col>
@@ -272,7 +272,7 @@ const Dashboard = () => {
                                 loading={loading}
                                 icon={<Icon component={GiSecretBook}/>}
                                 color={colors.education} 
-                                title='Education' 
+                                title='Pendidikan' 
                                 number={educationData.total}
                             />
                         </Col>
@@ -289,7 +289,7 @@ const Dashboard = () => {
                                 loading={loading}
                                 icon={<Icon component={BsBriefcase}/>}
                                 color={colors.experience} 
-                                title='Experience' 
+                                title='Pengalaman' 
                                 number={experienceData.total}
                             />
                         </Col>
@@ -306,7 +306,7 @@ const Dashboard = () => {
                                 loading={loading}
                                 icon={<Icon component={BiArchive}/>}
                                 color={colors.project} 
-                                title='Project' 
+                                title='Proyek' 
                                 number={projectData.total}
                             />
                         </Col>
@@ -333,7 +333,7 @@ const Dashboard = () => {
                                 loading={loading}
                                 icon={<Icon component={RiServiceLine}/>}
                                 color={colors.service} 
-                                title='Service' 
+                                title='Layanan' 
                                 number={servicesData.total}
                             />
                         </Col>
@@ -387,7 +387,7 @@ const Dashboard = () => {
                             >
                                 <Row>
                                     <Col md={24} sm={24} xs={24} style={{textAlign: 'center', paddingBottom: '14px'}}>
-                                        <Text type={'secondary'}>Visitor</Text>
+                                        <Text type={'secondary'}>Pengunjung</Text>
                                     </Col>
                                     <Col md={6} sm={24} xs={24}>
                                         <StatCard
@@ -405,7 +405,7 @@ const Dashboard = () => {
                                             loading={loading}
                                             icon={<Icon component={AiOutlineTeam}/>}
                                             color={colors.visitor} 
-                                            title='This Month' 
+                                            title='Bulan Ini' 
                                             number={visitorData.thisMonth}
                                         />
                                     </Col>
@@ -415,7 +415,7 @@ const Dashboard = () => {
                                             loading={loading}
                                             icon={<Icon component={AiOutlineTeam}/>}
                                             color={colors.visitor} 
-                                            title='This Week' 
+                                            title='Minggu Ini' 
                                             number={visitorData.thisWeek}
                                         />
                                     </Col>
@@ -425,7 +425,7 @@ const Dashboard = () => {
                                             loading={loading}
                                             icon={<Icon component={AiOutlineTeam}/>}
                                             color={colors.visitor} 
-                                            title='Today' 
+                                            title='Hari Ini' 
                                             number={visitorData.today}
                                         />
                                     </Col>
@@ -451,7 +451,7 @@ const Dashboard = () => {
                             >
                                 <Row>
                                     <Col md={24} sm={24} xs={24} style={{textAlign: 'center', paddingBottom: '14px'}}>
-                                        <Text type={'secondary'}>Message</Text>
+                                        <Text type={'secondary'}>Pesan</Text>
                                     </Col>
                                     <Col md={6} sm={24} xs={24}>
                                         <StatCard
@@ -469,7 +469,7 @@ const Dashboard = () => {
                                             loading={loading}
                                             icon={<Icon component={RiMessage3Line}/>}
                                             color={colors.message} 
-                                            title='This Month' 
+                                            title='Bulan Ini' 
                                             number={messageData.thisMonth}
                                         />
                                     </Col>
@@ -479,7 +479,7 @@ const Dashboard = () => {
                                             loading={loading}
                                             icon={<Icon component={RiMessage3Line}/>}
                                             color={colors.message} 
-                                            title='This Week' 
+                                            title='Minggu Ini' 
                                             number={messageData.thisWeek}
                                         />
                                     </Col>
@@ -489,7 +489,7 @@ const Dashboard = () => {
                                             loading={loading}
                                             icon={<Icon component={RiMessage3Line}/>}
                                             color={colors.message} 
-                                            title='Today' 
+                                            title='Hari Ini' 
                                             number={messageData.today}
                                         />
                                     </Col>
@@ -540,7 +540,7 @@ const Dashboard = () => {
                             >
                                 <Card.Meta
                                     title={<React.Fragment><small>{currentTemplate && currentTemplate.title}</small></React.Fragment>}
-                                    description={<React.Fragment><small>Change Template</small></React.Fragment>}
+                                    description={<React.Fragment><small>Ganti Template</small></React.Fragment>}
                                 />
                             </Card>
                         </Col>
@@ -581,11 +581,11 @@ const Dashboard = () => {
                                 }
                             >
                                 <Card.Meta
-                                    title={<React.Fragment><small>Daily Wallpaper {demoMode && (
+                                    title={<React.Fragment><small>Wallpaper Harian {demoMode && (
                                         <a href="https://github.com/arifszn/reddit-image-fetcher" target="_blank" rel="noreferrer"><InfoCircleOutlined style={{paddingLeft: '2px', color: 'rgba(0, 0, 0, 0.45)'}}/></a>
                                     )}</small></React.Fragment>}
                                     description={
-                                        <div onClick={getWallpaper} style={{cursor: 'pointer'}}><small>Get Another</small></div>
+                                        <div onClick={getWallpaper} style={{cursor: 'pointer'}}><small>Ganti Lainnya</small></div>
                                     }
                                 />
                             </Card>

@@ -1,4 +1,4 @@
-import { Avatar } from 'antd';
+﻿import { Avatar } from 'antd';
 import React from 'react';
 import styled from 'styled-components';
 import Routes from '../../../common/helpers/Routes';
@@ -45,7 +45,7 @@ const NavContent = () => {
                     )
                 }
                 <ItemWrapper className="z-hover">
-                    <a href={Routes.web.frontend.home} target="_blank" rel="noreferrer" title="Visit Front Panel">
+                    <a href={Routes.web.frontend.home} target="_blank" rel="noreferrer" title="Lihat Tampilan Depan">
                         <Avatar /* style={{ backgroundColor: 'var(--primary-hover-color)' }} */ icon={<Icon component={CgMouse} />} size="small"/>
                     </a>
                 </ItemWrapper>

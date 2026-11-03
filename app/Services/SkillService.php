@@ -41,13 +41,13 @@ class SkillService implements SkillInterface
             
             if ($result) {
                 return [
-                    'message' => 'Data is fetched successfully',
+                    'message' => 'Data berhasil diambil',
                     'payload' => $result,
                     'status' => CoreConstants::STATUS_CODE_SUCCESS
                 ];
             } else {
                 return [
-                    'message' => 'No result found',
+                    'message' => 'Data tidak ditemukan',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_NOT_FOUND
                 ];
@@ -55,7 +55,7 @@ class SkillService implements SkillInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -78,7 +78,7 @@ class SkillService implements SkillInterface
 
             if ($validate->fails()) {
                 return [
-                    'message' => 'Validation Error',
+                    'message' => 'Kesalahan Validasi',
                     'payload' => $validate->errors(),
                     'status' => CoreConstants::STATUS_CODE_BAD_REQUEST
                 ];
@@ -101,13 +101,13 @@ class SkillService implements SkillInterface
 
             if ($result) {
                 return [
-                    'message' => isset($data['id']) ? 'Data is successfully updated' : 'Data is successfully saved',
+                    'message' => isset($data['id']) ? 'Data berhasil diperbarui' : 'Data berhasil disimpan',
                     'payload' => $result,
                     'status' => CoreConstants::STATUS_CODE_SUCCESS
                 ];
             } else {
                 return [
-                    'message' => 'Something went wrong',
+                    'message' => 'Terjadi kesalahan sistem',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_ERROR
                 ];
@@ -115,7 +115,7 @@ class SkillService implements SkillInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -136,13 +136,13 @@ class SkillService implements SkillInterface
             
             if ($data) {
                 return [
-                    'message' => 'Data is fetched successfully',
+                    'message' => 'Data berhasil diambil',
                     'payload' => $data,
                     'status' => CoreConstants::STATUS_CODE_SUCCESS
                 ];
             } else {
                 return [
-                    'message' => 'No result is found',
+                    'message' => 'Data tidak ditemukan',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_NOT_FOUND
                 ];
@@ -150,7 +150,7 @@ class SkillService implements SkillInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -202,13 +202,13 @@ class SkillService implements SkillInterface
             
             if ($result) {
                 return [
-                    'message' => 'Data is fetched successfully',
+                    'message' => 'Data berhasil diambil',
                     'payload' => $result,
                     'status' => CoreConstants::STATUS_CODE_SUCCESS
                 ];
             } else {
                 return [
-                    'message' => 'No result found',
+                    'message' => 'Data tidak ditemukan',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_NOT_FOUND
                 ];
@@ -216,7 +216,7 @@ class SkillService implements SkillInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -236,13 +236,13 @@ class SkillService implements SkillInterface
             
             if ($data) {
                 return [
-                    'message' => 'Data is deleted successfully',
+                    'message' => 'Data berhasil dihapus',
                     'payload' => $data,
                     'status' => CoreConstants::STATUS_CODE_SUCCESS
                 ];
             } else {
                 return [
-                    'message' => 'Nothing to Delete',
+                    'message' => 'Tidak ada data untuk dihapus',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_ERROR
                 ];
@@ -250,7 +250,7 @@ class SkillService implements SkillInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];

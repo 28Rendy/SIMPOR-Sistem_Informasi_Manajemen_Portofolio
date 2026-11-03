@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { Drawer, Button, Spin, Input } from 'antd';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -85,7 +85,7 @@ const CodeEditorPopup = (props) => {
                     style={{background: 'ghostwhite'}}
                     value={value}
                     onChange={onChange}
-                    placeholder="Type some code..."
+                    placeholder="Ketik kode di sini..."
                     autoSize={{ minRows: 15}}
                 />
             </Spin>

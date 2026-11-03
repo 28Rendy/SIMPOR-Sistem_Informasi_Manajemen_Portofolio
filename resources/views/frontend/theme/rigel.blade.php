@@ -1,4 +1,4 @@
-<!-- =======================================================
+﻿<!-- =======================================================
 * Template Name: MyResume - v2.1.0
 * Template URL: https://bootstrapmade.com/free-html-bootstrap-template-my-resume/
 * Author: BootstrapMade.com
@@ -80,27 +80,27 @@
     <header id="header" class="d-flex flex-column justify-content-center">
         <nav class="nav-menu">
             <ul>
-                <li class="active"><a href="#hero"><i class="bx bx-home"></i> <span>Home</span></a></li>
+                <li class="active"><a href="#hero"><i class="bx bx-home"></i> <span>Beranda</span></a></li>
                 @if ($portfolioConfig['visibility']['about'])
-                <li><a href="#about"><i class="bx bx-user"></i> <span>About</span></a></li>
+                <li><a href="#about"><i class="bx bx-user"></i> <span>Tentang</span></a></li>
                 @endif
                 @if ($portfolioConfig['visibility']['skills'])
-                <li><a href="#skills"><i class='bx bx-code-block'></i> <span>Skills</span></a></li>
+                <li><a href="#skills"><i class='bx bx-code-block'></i> <span>Keahlian</span></a></li>
                 @endif
                 @if ($portfolioConfig['visibility']['experiences'])
-                <li><a href="#experiences"><i class='bx bx-briefcase'></i> <span>Experiences</span></a></li>
+                <li><a href="#experiences"><i class='bx bx-briefcase'></i> <span>Pengalaman</span></a></li>
                 @endif
                 @if ($portfolioConfig['visibility']['education'])
-                <li><a href="#education"><i class='bx bx-book' ></i> <span>Education</span></a></li>
+                <li><a href="#education"><i class='bx bx-book' ></i> <span>Pendidikan</span></a></li>
                 @endif
                 @if ($portfolioConfig['visibility']['projects'])
-                <li><a href="#projects"><i class='bx bxs-package'></i> <span>Projects</span></a></li>
+                <li><a href="#projects"><i class='bx bxs-package'></i> <span>Proyek</span></a></li>
                 @endif
                 @if ($portfolioConfig['visibility']['services'])
-                <li><a href="#services"><i class="bx bx-server"></i> <span>Services</span></a></li>
+                <li><a href="#services"><i class="bx bx-server"></i> <span>Layanan</span></a></li>
                 @endif
                 @if ($portfolioConfig['visibility']['contact'])
-                <li><a href="#contact"><i class="bx bx-envelope"></i> <span>Contact</span></a></li>
+                <li><a href="#contact"><i class="bx bx-envelope"></i> <span>Kontak</span></a></li>
                 @endif
             </ul>
         </nav><!-- .nav-menu -->
@@ -113,7 +113,7 @@
             <p><span class="typed"></span></p>
             @if ($portfolioConfig['visibility']['cv'])
                 <div class="my-3">
-                    <a href="{{$about->cv}}" class="btn btn-light btn-sm" download>Download CV</a>
+                    <a href="{{$about->cv}}" class="btn btn-light btn-sm" download>Unduh CV</a>
                 </div>
             @endif
             @if ($about->social_links)
@@ -134,7 +134,7 @@
         <section id="about" class="about">
             <div class="container" data-aos="zoom-in">
                 <div class="section-title">
-                    <h2>About</h2>
+                    <h2>Tentang Saya</h2>
                 </div>
 
                 <div class="row">
@@ -169,7 +169,7 @@
         <section id="skills" class="skills section-bg">
             <div class="container">
                 <div class="section-title">
-                    <h2>Skills</h2>
+                    <h2>Keahlian</h2>
                 </div>
                 <div class="row skills-content">
                     @if (!empty($skills))
@@ -204,7 +204,7 @@
         <section id="experiences" class="resume">
             <div class="container">
                 <div class="section-title">
-                    <h2>Experiences</h2>
+                    <h2>Pengalaman</h2>
                 </div>
                 <div>
                     @if ($experiences)
@@ -227,7 +227,7 @@
         <section id="education" class="resume">
             <div class="container">
                 <div class="section-title">
-                    <h2>Education</h2>
+                    <h2>Pendidikan</h2>
                 </div>
                 <div>
                     @if ($education)
@@ -251,7 +251,7 @@
         <section id="projects" class="resume">
             <div class="container">
                 <div class="section-title">
-                    <h2>Projects</h2>
+                    <h2>Proyek</h2>
                 </div>
                 <div>
                     <div 
@@ -270,7 +270,7 @@
         <section id="services" class="services">
             <div class="container">
                 <div class="section-title">
-                    <h2>Services</h2>
+                    <h2>Layanan</h2>
                 </div>
                 <div class="row">
                     @if (!empty($services))
@@ -300,7 +300,7 @@
         <section id="contact" class="contact">
             <div class="container" data-aos="zoom-in">
                 <div class="section-title">
-                    <h2>Contact</h2>
+                    <h2>Hubungi Saya</h2>
                 </div>
                 <div class="row mt-1">
                     <div class="col-lg-4">
@@ -308,7 +308,7 @@
                             @if ($about->phone && $about->phone !== '')
                                 <div class="phone">
                                     <i class='bx bxs-phone'></i>
-                                    <h4>Call:</h4>
+                                    <h4>Telepon:</h4>
                                     <p>{{$about->phone}}</p>
                                 </div>
                             @endif
@@ -333,23 +333,23 @@
                             @csrf
                             <div class="form-row">
                                 <div class="col-md-6 form-group">
-                                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="required" data-msg="Please enter your name" />
+                                    <input type="text" name="name" class="form-control" id="name" placeholder="Nama Anda" data-rule="required" data-msg="Silakan masukkan nama Anda" />
                                     <div class="validate"></div>
                                 </div>
                                 <div class="col-md-6 form-group">
-                                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
+                                    <input type="email" class="form-control" name="email" id="email" placeholder="Email Anda" data-rule="email" data-msg="Silakan masukkan email yang valid" />
                                     <div class="validate"></div>
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="required" data-msg="Please enter subject" />
+                                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subjek Pesan" data-rule="required" data-msg="Silakan masukkan subjek pesan" />
                                 <div class="validate"></div>
                             </div>
                             <div class="form-group">
-                                <textarea class="form-control" name="body" id="body" rows="5" data-rule="required" data-msg="Please write something" placeholder="Body"></textarea>
+                                <textarea class="form-control" name="body" id="body" rows="5" data-rule="required" data-msg="Silakan tulis pesan Anda" placeholder="Tulis pesan Anda..."></textarea>
                                 <div class="validate"></div>
                             </div>
-                            <div class="text-center"><button type="submit" class="submit-button">Send Message</button></div>
+                            <div class="text-center"><button type="submit" class="submit-button">Kirim Pesan</button></div>
                         </form>
                     </div>
                 </div>
@@ -373,7 +373,7 @@
                 </div>
             @endif
             <div class="copyright">
-                ©{{ now()->year }} All rights reserved.
+                ©{{ now()->year }} Hak cipta dilindungi undang-undang.
             </div>
             <div class="credits">
                 <!-- All the links in the footer should remain intact. -->
@@ -456,7 +456,7 @@
 
                     button.attr('disabled', true);
                     button.html(`<span class="content">
-                        Sending <i class="fas fa-spinner fa-spin"></i>
+                        Mengirimkan <i class="fas fa-spinner fa-spin"></i>
                     </span>`);
 
                     $.ajax({
@@ -485,7 +485,7 @@
                         complete: function(data) {
                             button.attr('disabled', false);
                             button.html(`<span class="content">
-                                Send <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                Kirim <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z">
                                     </path>
                                 </svg>
@@ -495,7 +495,7 @@
                 }
             });
             
-            function showNotification(message = 'Something went wrong', type = 'error', sticky = false) {
+            function showNotification(message = 'Terjadi kesalahan', type = 'error', sticky = false) {
                 iziToast.show({
                     title: '',
                     message: message,

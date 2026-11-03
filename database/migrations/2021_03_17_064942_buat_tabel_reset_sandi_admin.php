@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateServicesTable extends Migration
+class BuatTabelResetSandiAdmin extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,10 @@ class CreateServicesTable extends Migration
      */
     public function up()
     {
-        Schema::create('services', function (Blueprint $table) {
-            $table->id();
-            $table->string('title');
-            $table->string('icon');
-            $table->longText('details');
-            $table->timestamps();
+        Schema::create('admin_password_resets', function (Blueprint $table) {
+            $table->string('email')->index();
+            $table->string('token');
+            $table->timestamp('created_at')->nullable();
         });
     }
 
@@ -29,6 +27,6 @@ class CreateServicesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('services');
+        Schema::dropIfExists('admin_password_resets');
     }
 }

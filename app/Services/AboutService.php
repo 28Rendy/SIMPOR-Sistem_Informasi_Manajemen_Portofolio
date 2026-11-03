@@ -42,13 +42,13 @@ class AboutService implements AboutInterface
 
             if ($result) {
                 return [
-                    'message' => 'Data is fetched successfully',
+                    'message' => 'Data berhasil diambil',
                     'payload' => $result,
                     'status' => CoreConstants::STATUS_CODE_SUCCESS
                 ];
             } else {
                 return [
-                    'message' => 'No result found',
+                    'message' => 'Data tidak ditemukan',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_NOT_FOUND
                 ];
@@ -56,7 +56,7 @@ class AboutService implements AboutInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -79,7 +79,7 @@ class AboutService implements AboutInterface
 
             if ($validate->fails()) {
                 return [
-                    'message' => 'Bad Request',
+                    'message' => 'Permintaan tidak valid',
                     'payload' => $validate->errors(),
                     'status' => CoreConstants::STATUS_CODE_BAD_REQUEST
                 ];
@@ -128,13 +128,13 @@ class AboutService implements AboutInterface
 
             if ($result) {
                 return [
-                    'message' => 'Data is successfully updated',
+                    'message' => 'Data berhasil diperbarui',
                     'payload' => $result,
                     'status' => CoreConstants::STATUS_CODE_SUCCESS
                 ];
             } else {
                 return [
-                    'message' => 'Something went wrong',
+                    'message' => 'Terjadi kesalahan sistem',
                     'payload' => null,
                     'status'  => CoreConstants::STATUS_CODE_ERROR
                 ];
@@ -142,7 +142,7 @@ class AboutService implements AboutInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -164,7 +164,7 @@ class AboutService implements AboutInterface
 
             if ($validate->fails()) {
                 return [
-                    'message' => 'Bad Request',
+                    'message' => 'Permintaan tidak valid',
                     'payload' => $validate->errors(),
                     'status' => CoreConstants::STATUS_CODE_BAD_REQUEST
                 ];
@@ -198,7 +198,7 @@ class AboutService implements AboutInterface
 
                 if ($updateResponse) {
                     return [
-                        'message' => 'Avatar is successfully saved',
+                        'message' => 'Foto profil (avatar) berhasil disimpan',
                         'payload' => [
                             'file' => $pathName.$fileName
                         ],
@@ -206,14 +206,14 @@ class AboutService implements AboutInterface
                     ];
                 } else {
                     return [
-                        'message' => 'Something went wrong',
+                        'message' => 'Terjadi kesalahan sistem',
                         'payload' => null,
                         'status' => CoreConstants::STATUS_CODE_ERROR
                     ];
                 }
             } else {
                 return [
-                    'message' => 'File could not be saved',
+                    'message' => 'Berkas gagal disimpan',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_ERROR
                 ];
@@ -221,7 +221,7 @@ class AboutService implements AboutInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -261,7 +261,7 @@ class AboutService implements AboutInterface
 
                 if ($updateResponse) {
                     return [
-                        'message' => 'File is deleted successfully',
+                        'message' => 'Berkas berhasil dihapus',
                         'payload' => [
                             'file' => $defaultAvatar
                         ],
@@ -269,14 +269,14 @@ class AboutService implements AboutInterface
                     ];
                 } else {
                     return [
-                        'message' => 'Something went wrong',
+                        'message' => 'Terjadi kesalahan sistem',
                         'payload' => null,
                         'status' => CoreConstants::STATUS_CODE_ERROR
                     ];
                 }
             } else {
                 return [
-                    'message' => 'File could not be deleted',
+                    'message' => 'Berkas gagal dihapus',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_ERROR
                 ];
@@ -284,7 +284,7 @@ class AboutService implements AboutInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -306,7 +306,7 @@ class AboutService implements AboutInterface
 
             if ($validate->fails()) {
                 return [
-                    'message' => 'Bad Request',
+                    'message' => 'Permintaan tidak valid',
                     'payload' => $validate->errors(),
                     'status' => CoreConstants::STATUS_CODE_BAD_REQUEST
                 ];
@@ -340,7 +340,7 @@ class AboutService implements AboutInterface
 
                 if ($updateResponse) {
                     return [
-                        'message' => 'cover is successfully saved',
+                        'message' => 'Foto sampul berhasil disimpan',
                         'payload' => [
                             'file' => $pathName.$fileName
                         ],
@@ -348,14 +348,14 @@ class AboutService implements AboutInterface
                     ];
                 } else {
                     return [
-                        'message' => 'Something went wrong',
+                        'message' => 'Terjadi kesalahan sistem',
                         'payload' => null,
                         'status' => CoreConstants::STATUS_CODE_ERROR
                     ];
                 }
             } else {
                 return [
-                    'message' => 'File could not be saved',
+                    'message' => 'Berkas gagal disimpan',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_ERROR
                 ];
@@ -363,7 +363,7 @@ class AboutService implements AboutInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -403,7 +403,7 @@ class AboutService implements AboutInterface
 
                 if ($updateResponse) {
                     return [
-                        'message' => 'File is deleted successfully',
+                        'message' => 'Berkas berhasil dihapus',
                         'payload' => [
                             'file' => $defaultCover
                         ],
@@ -411,14 +411,14 @@ class AboutService implements AboutInterface
                     ];
                 } else {
                     return [
-                        'message' => 'Something went wrong',
+                        'message' => 'Terjadi kesalahan sistem',
                         'payload' => null,
                         'status' => CoreConstants::STATUS_CODE_ERROR
                     ];
                 }
             } else {
                 return [
-                    'message' => 'File could not be deleted',
+                    'message' => 'Berkas gagal dihapus',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_ERROR
                 ];
@@ -426,7 +426,7 @@ class AboutService implements AboutInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -448,7 +448,7 @@ class AboutService implements AboutInterface
 
             if ($validate->fails()) {
                 return [
-                    'message' => 'Bad Request',
+                    'message' => 'Permintaan tidak valid',
                     'payload' => $validate->errors(),
                     'status' => CoreConstants::STATUS_CODE_BAD_REQUEST
                 ];
@@ -482,7 +482,7 @@ class AboutService implements AboutInterface
                 
                 if ($updateResponse) {
                     return [
-                        'message' => 'CV is successfully saved',
+                        'message' => 'CV/Resume berhasil disimpan',
                         'payload' => [
                             'file' => $pathName.$fileName
                         ],
@@ -490,14 +490,14 @@ class AboutService implements AboutInterface
                     ];
                 } else {
                     return [
-                        'message' => 'Something went wrong',
+                        'message' => 'Terjadi kesalahan sistem',
                         'payload' => null,
                         'status' => CoreConstants::STATUS_CODE_ERROR
                     ];
                 }
             } else {
                 return [
-                    'message' => 'File could not be saved',
+                    'message' => 'Berkas gagal disimpan',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_ERROR
                 ];
@@ -505,7 +505,7 @@ class AboutService implements AboutInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -543,7 +543,7 @@ class AboutService implements AboutInterface
 
                 if ($updateResponse) {
                     return [
-                        'message' => 'File is deleted successfully',
+                        'message' => 'Berkas berhasil dihapus',
                         'payload' => [
                             'file' => null
                         ],
@@ -551,14 +551,14 @@ class AboutService implements AboutInterface
                     ];
                 } else {
                     return [
-                        'message'  => 'Something went wrong',
+                        'message'  => 'Terjadi kesalahan sistem',
                         'payload' => null,
                         'status'  => CoreConstants::STATUS_CODE_ERROR
                     ];
                 }
             } else {
                 return [
-                    'message'  => 'File could not be deleted',
+                    'message'  => 'Berkas gagal dihapus',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_ERROR
                 ];
@@ -566,7 +566,7 @@ class AboutService implements AboutInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];

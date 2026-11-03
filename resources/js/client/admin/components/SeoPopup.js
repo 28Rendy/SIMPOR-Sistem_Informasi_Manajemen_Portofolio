@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { Drawer, Input, Button, Form } from 'antd';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -85,7 +85,7 @@ const SeoPopup = (props) => {
 
     return (
         <StyledDrawer
-            title="Search Engine Optimization"
+            title="Optimasi Mesin Pencari (SEO)"
             onClose={handleClose}
             visible={visible}
             destroyOnClose={true}
@@ -116,19 +116,19 @@ const SeoPopup = (props) => {
                     label={<React.Fragment>Meta Title</React.Fragment>}
                     name="title"
                 >
-                    <Input placeholder="Enter Meta Title"/>
+                    <Input placeholder="Masukkan Judul Meta (Title)"/>
                 </Form.Item>
                 <Form.Item
                     label={<React.Fragment>Meta Author</React.Fragment>}
                     name="author"
                 >
-                    <Input placeholder="Enter Meta Author"/>
+                    <Input placeholder="Masukkan Penulis (Author)"/>
                 </Form.Item>
                 <Form.Item
                     label={<React.Fragment>Meta Description</React.Fragment>}
                     name="description"
                 >
-                    <Input.TextArea rows={4} placeholder="Enter Meta Description"/>
+                    <Input.TextArea rows={4} placeholder="Masukkan Deskripsi Meta"/>
                 </Form.Item>
                 <Form.Item 
                     label="Meta Image" 

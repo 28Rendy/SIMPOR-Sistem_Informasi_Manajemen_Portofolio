@@ -49,7 +49,7 @@ class SettingService implements SettingInterface
 
             if ($validate->fails()) {
                 return [
-                    'message' => 'Bad Request',
+                    'message' => 'Permintaan tidak valid',
                     'payload' => $validate->errors(),
                     'status' => CoreConstants::STATUS_CODE_BAD_REQUEST
                 ];
@@ -72,13 +72,13 @@ class SettingService implements SettingInterface
 
             if ($result) {
                 return [
-                    'message' => 'Data is saved successfully',
+                    'message' => 'Data berhasil disimpan',
                     'payload' => $result,
                     'status' => CoreConstants::STATUS_CODE_SUCCESS
                 ];
             } else {
                 return [
-                    'message' => 'Something went wrong',
+                    'message' => 'Terjadi kesalahan sistem',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_ERROR
                 ];
@@ -86,7 +86,7 @@ class SettingService implements SettingInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -110,13 +110,13 @@ class SettingService implements SettingInterface
 
             if ($result) {
                 return [
-                    'message' => 'Setting is fetched successfully',
+                    'message' => 'Pengaturan berhasil diambil',
                     'payload' => $result,
                     'status' => CoreConstants::STATUS_CODE_SUCCESS
                 ];
             } else {
                 return [
-                    'message' => 'Setting is not found',
+                    'message' => 'Pengaturan tidak ditemukan',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_NOT_FOUND
                 ];
@@ -124,7 +124,7 @@ class SettingService implements SettingInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -239,14 +239,14 @@ class SettingService implements SettingInterface
             $data['demoMode'] = Config::get('custom.demo_mode');
             
             return [
-                'message' => 'Settings are fetched successfully',
+                'message' => 'Pengaturan berhasil diambil',
                 'payload' => $data,
                 'status' => CoreConstants::STATUS_CODE_SUCCESS
             ];
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -269,7 +269,7 @@ class SettingService implements SettingInterface
 
             if ($validate->fails()) {
                 return [
-                    'message' => 'Bad Request',
+                    'message' => 'Permintaan tidak valid',
                     'payload' => $validate->errors(),
                     'status' => CoreConstants::STATUS_CODE_BAD_REQUEST
                 ];
@@ -288,7 +288,7 @@ class SettingService implements SettingInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -308,13 +308,13 @@ class SettingService implements SettingInterface
             $file = DotenvEditor::save();
             if ($file) {
                 return [
-                    'message' => 'Site name is successfully updated',
+                    'message' => 'Nama situs berhasil diperbarui',
                     'payload' => $newName,
                     'status' => CoreConstants::STATUS_CODE_SUCCESS
                 ];
             } else {
                 return [
-                    'message' => 'Something went wrong',
+                    'message' => 'Terjadi kesalahan sistem',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_ERROR
                 ];
@@ -322,7 +322,7 @@ class SettingService implements SettingInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -344,7 +344,7 @@ class SettingService implements SettingInterface
 
             if ($validate->fails()) {
                 return [
-                    'message' => 'Bad Request',
+                    'message' => 'Permintaan tidak valid',
                     'payload' => $validate->errors(),
                     'status' => CoreConstants::STATUS_CODE_BAD_REQUEST
                 ];
@@ -376,7 +376,7 @@ class SettingService implements SettingInterface
 
                 if ($result['status'] === CoreConstants::STATUS_CODE_SUCCESS) {
                     return [
-                        'message' => 'File is successfully saved',
+                        'message' => 'Berkas berhasil disimpan',
                         'payload' => [
                             'file' => $pathName.$fileName
                         ],
@@ -387,7 +387,7 @@ class SettingService implements SettingInterface
                 }
             } else {
                 return [
-                    'message' => 'File could not be saved',
+                    'message' => 'Berkas gagal disimpan',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_ERROR
                 ];
@@ -395,7 +395,7 @@ class SettingService implements SettingInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -428,7 +428,7 @@ class SettingService implements SettingInterface
 
                 if ($result['status'] === CoreConstants::STATUS_CODE_SUCCESS) {
                     return [
-                        'message' => 'Logo is deleted successfully',
+                        'message' => 'Logo berhasil dihapus',
                         'payload' => [
                             'file' => $defaultLogo
                         ],
@@ -439,7 +439,7 @@ class SettingService implements SettingInterface
                 }
             } else {
                 return [
-                    'message' => 'Logo could not be deleted',
+                    'message' => 'Logo gagal dihapus',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_ERROR
                 ];
@@ -447,7 +447,7 @@ class SettingService implements SettingInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -469,7 +469,7 @@ class SettingService implements SettingInterface
 
             if ($validate->fails()) {
                 return [
-                    'message' => 'Bad Request',
+                    'message' => 'Permintaan tidak valid',
                     'payload' => $validate->errors(),
                     'status' => CoreConstants::STATUS_CODE_BAD_REQUEST
                 ];
@@ -502,7 +502,7 @@ class SettingService implements SettingInterface
 
                 if ($result['status'] === CoreConstants::STATUS_CODE_SUCCESS) {
                     return [
-                        'message' => 'Favicon is successfully saved',
+                        'message' => 'Favicon berhasil disimpan',
                         'payload' => [
                             'file' => $pathName.$fileName
                         ],
@@ -513,7 +513,7 @@ class SettingService implements SettingInterface
                 }
             } else {
                 return [
-                    'message' => 'Favicon could not be saved',
+                    'message' => 'Favicon gagal disimpan',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_ERROR
                 ];
@@ -521,7 +521,7 @@ class SettingService implements SettingInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -553,7 +553,7 @@ class SettingService implements SettingInterface
 
                 if ($result['status'] === CoreConstants::STATUS_CODE_SUCCESS) {
                     return [
-                        'message' => 'File is deleted successfully',
+                        'message' => 'Berkas berhasil dihapus',
                         'payload' => [
                             'file' => $defaultFavicon
                         ],
@@ -564,7 +564,7 @@ class SettingService implements SettingInterface
                 }
             } else {
                 return [
-                    'message' => 'File could not be deleted',
+                    'message' => 'Berkas gagal dihapus',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_ERROR
                 ];
@@ -572,7 +572,7 @@ class SettingService implements SettingInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -599,7 +599,7 @@ class SettingService implements SettingInterface
 
             if ($validate->fails()) {
                 return [
-                    'message' => 'Bad Request',
+                    'message' => 'Permintaan tidak valid',
                     'payload' => $validate->errors(),
                     'status' => CoreConstants::STATUS_CODE_BAD_REQUEST
                 ];
@@ -617,13 +617,13 @@ class SettingService implements SettingInterface
 
             if ($file) {
                 return [
-                    'message' => 'Mail setting is successfully updated',
+                    'message' => 'Pengaturan email berhasil diperbarui',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_SUCCESS
                 ];
             } else {
                 return [
-                    'message' => 'Something went wrong',
+                    'message' => 'Terjadi kesalahan sistem',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_ERROR
                 ];
@@ -631,7 +631,7 @@ class SettingService implements SettingInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status' => CoreConstants::STATUS_CODE_ERROR
             ];

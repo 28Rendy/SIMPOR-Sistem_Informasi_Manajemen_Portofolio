@@ -1,0 +1,11 @@
+{
+    "Not Found": "Halaman Tidak Ditemukan",
+    "Forbidden": "Akses Ditolak",
+    "Server Error": "Terjadi Kesalahan pada Server",
+    "Unauthorized": "Tidak Memiliki Izin",
+    "Page Expired": "Halaman Telah Kedaluwarsa",
+    "Too Many Requests": "Terlalu Banyak Permintaan",
+    "Service Unavailable": "Layanan Sedang Tidak Tersedia",
+    "Error": "Kesalahan"
+}
+

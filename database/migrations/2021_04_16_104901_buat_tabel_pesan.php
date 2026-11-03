@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMessagesTable extends Migration
+class BuatTabelPesan extends Migration
 {
     /**
      * Run the migrations.
@@ -19,7 +19,7 @@ class CreateMessagesTable extends Migration
             $table->string('email');
             $table->string('subject');
             $table->longText('body');
-            $table->boolean('replied')->default(CoreConstants::FALSE)->comment('reply back status');
+            $table->boolean('replied')->default(CoreConstants::FALSE)->comment('status telah dibalas');
             $table->timestamps();
         });
     }

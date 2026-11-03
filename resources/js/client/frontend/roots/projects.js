@@ -104,7 +104,7 @@ function App() {
                                                 setSelectedCategory(e.target.value);
                                             }
                                         }}>
-                                            <Radio.Button>All</Radio.Button>
+                                            <Radio.Button>Semua</Radio.Button>
                                             {
                                                 categories.map((category, index) => (
                                                     <Radio.Button key={index} value={category} style={{textTransform: 'capitalize'}}>{category}</Radio.Button>
@@ -153,7 +153,7 @@ function App() {
                                                 }
                                                 actions={[
                                                     <React.Fragment key="view">
-                                                        See Details
+                                                        Lihat Detail
                                                     </React.Fragment>
                                                 ]}
                                             >

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { Spin, List, PageHeader, Switch } from 'antd';
 import PropTypes from 'prop-types';
 import HTTP from '../../../common/helpers/HTTP';
@@ -76,7 +76,7 @@ const Visibility = (props) => {
     return (
         <React.Fragment>
             <PageHeader
-                title="Visibility"
+                title="Visibilitas Bagian"
             >
                 <List
                     itemLayout="horizontal"
@@ -98,7 +98,7 @@ const Visibility = (props) => {
                                 }}
                             />
                         ]}>
-                            <Item.Meta title={'About'} description={'Display about section.'}/>
+                            <Item.Meta title={'Tentang'} description={'Tampilkan bagian Tentang Saya.'}/>
                         </StyledListItem>
                     </Spin>
                     <Spin delay={500} size="small" spinning={loading && currentSettingToChange === CoreConstants.portfolioConfig.VISIBILITY_SKILL}>
@@ -117,7 +117,7 @@ const Visibility = (props) => {
                                 }}
                             />
                         ]}>
-                            <Item.Meta title={'Skills'} description={'Display skills section.'}/>
+                            <Item.Meta title={'Keahlian'} description={'Tampilkan bagian Keahlian.'}/>
                         </StyledListItem>
                     </Spin>
                     <Spin delay={500} size="small" spinning={loading && currentSettingToChange === CoreConstants.portfolioConfig.VISIBILITY_EDUCATION}>
@@ -136,7 +136,7 @@ const Visibility = (props) => {
                                 }}
                             />
                         ]}>
-                            <Item.Meta title={'Education'} description={'Display education section.'}/>
+                            <Item.Meta title={'Pendidikan'} description={'Tampilkan bagian Riwayat Pendidikan.'}/>
                         </StyledListItem>
                     </Spin>
                     <Spin delay={500} size="small" spinning={loading && currentSettingToChange === CoreConstants.portfolioConfig.VISIBILITY_EXPERIENCE}>
@@ -155,7 +155,7 @@ const Visibility = (props) => {
                                 }}
                             />
                         ]}>
-                            <Item.Meta title={'Experiences'} description={'Display experiences section.'}/>
+                            <Item.Meta title={'Pengalaman'} description={'Tampilkan bagian Riwayat Pengalaman.'}/>
                         </StyledListItem>
                     </Spin>
                     <Spin delay={500} size="small" spinning={loading && currentSettingToChange === CoreConstants.portfolioConfig.VISIBILITY_PROJECT}>
@@ -174,7 +174,7 @@ const Visibility = (props) => {
                                 }}
                             />
                         ]}>
-                            <Item.Meta title={'Projects'} description={'Display projects section.'}/>
+                            <Item.Meta title={'Proyek'} description={'Tampilkan bagian Galeri Proyek.'}/>
                         </StyledListItem>
                     </Spin>
                     <Spin delay={500} size="small" spinning={loading && currentSettingToChange === CoreConstants.portfolioConfig.VISIBILITY_SERVICE}>
@@ -193,7 +193,7 @@ const Visibility = (props) => {
                                 }}
                             />
                         ]}>
-                            <Item.Meta title={'Services'} description={'Display services section.'}/>
+                            <Item.Meta title={'Layanan'} description={'Tampilkan bagian Jasa & Layanan.'}/>
                         </StyledListItem>
                     </Spin>
                     <Spin delay={500} size="small" spinning={loading && currentSettingToChange === CoreConstants.portfolioConfig.VISIBILITY_CONTACT}>
@@ -212,7 +212,7 @@ const Visibility = (props) => {
                                 }}
                             />
                         ]}>
-                            <Item.Meta title={'Contact Form'} description={'Display contact form section.'}/>
+                            <Item.Meta title={'Formulir Kontak'} description={'Tampilkan formulir hubungi saya.'}/>
                         </StyledListItem>
                     </Spin>
                     <Spin delay={500} size="small" spinning={loading && currentSettingToChange === CoreConstants.portfolioConfig.VISIBILITY_FOOTER}>
@@ -231,7 +231,7 @@ const Visibility = (props) => {
                                 }}
                             />
                         ]}>
-                            <Item.Meta title={'Footer'} description={'Display footer section.'}/>
+                            <Item.Meta title={'Footer'} description={'Tampilkan bagian footer.'}/>
                         </StyledListItem>
                     </Spin>
                     <Spin delay={500} size="small" spinning={loading && currentSettingToChange === CoreConstants.portfolioConfig.VISIBILITY_CV}>
@@ -250,7 +250,7 @@ const Visibility = (props) => {
                                 }}
                             />
                         ]}>
-                            <Item.Meta title={'CV'} description={'Display CV download button.'}/>
+                            <Item.Meta title={'Unduh CV'} description={'Tampilkan tombol unduh CV/Resume.'}/>
                         </StyledListItem>
                     </Spin>
                     <Spin delay={500} size="small" spinning={loading && currentSettingToChange === CoreConstants.portfolioConfig.VISIBILITY_SKILL_PROFICIENCY}>
@@ -269,7 +269,7 @@ const Visibility = (props) => {
                                 }}
                             />
                         ]}>
-                            <Item.Meta title={'Skill Proficiency'} description={'Display proficiency bar of skills.'}/>
+                            <Item.Meta title={'Persentase Keahlian'} description={'Tampilkan bilah kemahiran/persentase keahlian.'}/>
                         </StyledListItem>
                     </Spin>
                 </List>

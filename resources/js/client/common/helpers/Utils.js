@@ -1,4 +1,4 @@
-import { notification, message as tinyMessage } from 'antd';
+﻿import { notification, message as tinyMessage } from 'antd';
 import CoreConstants from './CoreConstants';
 import { changeAntdTheme } from 'mini-dynamic-antd-theme';
 
@@ -10,7 +10,7 @@ import { changeAntdTheme } from 'mini-dynamic-antd-theme';
  * @param string/null title 
  * @param boolean sticky 
  */
-const showNotification = (message = 'Something went wrong', type = 'error', title = null, sticky = false) => {
+const showNotification = (message = 'Terjadi kesalahan sistem', type = 'error', title = null, sticky = false) => {
     notification[type]({
         message: title ? title : type[0].toUpperCase() + type.slice(1),
         description: message,
@@ -25,7 +25,7 @@ const showNotification = (message = 'Something went wrong', type = 'error', titl
  * @param string message 
  * @param string type 
  */
-const showTinyNotification = (message = 'Something went wrong', type = 'error') => {
+const showTinyNotification = (message = 'Terjadi kesalahan sistem', type = 'error') => {
     tinyMessage[type](message);
 };
 
@@ -63,7 +63,7 @@ const randomHexColor = () => {
 const handleException = (error, callback = null) => {
     console.error(error);
 
-    let errorMessage = 'Something went wrong';
+    let errorMessage = 'Terjadi kesalahan sistem';
 
     if (typeof error === 'string') {
         try {

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { Spin, List, PageHeader } from 'antd';
 import PropTypes from 'prop-types';
 import HTTP from '../../../common/helpers/HTTP';
@@ -62,7 +62,7 @@ const CustomScript = (props) => {
     return (
         <React.Fragment>
             <PageHeader
-                title="Custom Script"
+                title="Skrip Kustom"
             >
                 <List
                     itemLayout="horizontal"
@@ -81,7 +81,7 @@ const CustomScript = (props) => {
                                 </a>,
                             ]
                         }>
-                            <Item.Meta title={'Portfolio Header Script'} description={'Set script which will be placed in header.'} />
+                            <Item.Meta title={'Skrip Header Portofolio'} description={'Atur skrip kustom yang akan disisipkan pada bagian header.'} />
                         </StyledListItem>
                     </Spin>
                     <Spin delay={500} size="small" spinning={loading && currentSettingToChange === CoreConstants.portfolioConfig.SCRIPT_FOOTER}>
@@ -97,7 +97,7 @@ const CustomScript = (props) => {
                                 </a>,
                             ]
                         }>
-                            <Item.Meta title={'Portfolio Header Script'} description={'Set script which will be placed in footer.'} />
+                            <Item.Meta title={'Skrip Footer Portofolio'} description={'Atur skrip kustom yang akan disisipkan pada bagian footer.'} />
                         </StyledListItem>
                     </Spin>
                 </List>

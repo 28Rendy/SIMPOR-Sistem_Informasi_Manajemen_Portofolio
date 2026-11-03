@@ -43,7 +43,7 @@ class PortfolioConfigService implements PortfolioConfigInterface
 
             if ($validate->fails()) {
                 return [
-                    'message' => 'Validation Error',
+                    'message' => 'Kesalahan Validasi',
                     'payload' => $validate->errors(),
                     'status'  => CoreConstants::STATUS_CODE_BAD_REQUEST
                 ];
@@ -66,13 +66,13 @@ class PortfolioConfigService implements PortfolioConfigInterface
 
             if ($result) {
                 return [
-                    'message' => 'Data is successfully updated',
+                    'message' => 'Data berhasil diperbarui',
                     'payload' => $result,
                     'status'  => CoreConstants::STATUS_CODE_SUCCESS
                 ];
             } else {
                 return [
-                    'message' => 'Something went wrong',
+                    'message' => 'Terjadi kesalahan sistem',
                     'payload' => null,
                     'status'  => CoreConstants::STATUS_CODE_ERROR
                 ];
@@ -80,7 +80,7 @@ class PortfolioConfigService implements PortfolioConfigInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status'  => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -103,13 +103,13 @@ class PortfolioConfigService implements PortfolioConfigInterface
                         ->first();
             if ($result) {
                 return [
-                    'message' => 'Config is fetched successfully',
+                    'message' => 'Konfigurasi berhasil diambil',
                     'payload' => $result,
                     'status' => CoreConstants::STATUS_CODE_SUCCESS
                 ];
             } else {
                 return [
-                    'message' => 'Config is not found',
+                    'message' => 'Konfigurasi tidak ditemukan',
                     'payload' => null,
                     'status'  => CoreConstants::STATUS_CODE_NOT_FOUND
                 ];
@@ -117,7 +117,7 @@ class PortfolioConfigService implements PortfolioConfigInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status'  => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -303,14 +303,14 @@ class PortfolioConfigService implements PortfolioConfigInterface
             }
 
             return [
-                'message' => 'Configs are fetched successfully',
+                'message' => 'Daftar konfigurasi berhasil diambil',
                 'payload' => $data,
                 'status' => CoreConstants::STATUS_CODE_SUCCESS
             ];
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status'  => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -332,7 +332,7 @@ class PortfolioConfigService implements PortfolioConfigInterface
 
             if ($validate->fails()) {
                 return [
-                    'message' => 'Validation Error',
+                    'message' => 'Kesalahan Validasi',
                     'payload' => $validate->errors(),
                     'status' => CoreConstants::STATUS_CODE_BAD_REQUEST
                 ];
@@ -345,7 +345,7 @@ class PortfolioConfigService implements PortfolioConfigInterface
             
             if ($result['status'] === CoreConstants::STATUS_CODE_SUCCESS) {
                 return [
-                    'message' => 'Config is successfully updated',
+                    'message' => 'Konfigurasi berhasil diperbarui',
                     'payload' => $result['payload'],
                     'status' => CoreConstants::STATUS_CODE_SUCCESS
                 ];
@@ -355,7 +355,7 @@ class PortfolioConfigService implements PortfolioConfigInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status'  => CoreConstants::STATUS_CODE_ERROR
             ];
@@ -470,7 +470,7 @@ class PortfolioConfigService implements PortfolioConfigInterface
             }
             if ($count) {
                 return [
-                    'message' => 'SEO info is successfully saved',
+                    'message' => 'Informasi SEO berhasil disimpan',
                     'payload' => [
                         'count' => $count,
                         'inserted' => $inserted
@@ -479,7 +479,7 @@ class PortfolioConfigService implements PortfolioConfigInterface
                 ];
             } else {
                 return [
-                    'message' => 'Nothing is updated',
+                    'message' => 'Tidak ada data yang diperbarui',
                     'payload' => null,
                     'status' => CoreConstants::STATUS_CODE_ERROR
                 ];
@@ -487,7 +487,7 @@ class PortfolioConfigService implements PortfolioConfigInterface
         } catch (\Throwable $th) {
             Log::error($th->getMessage());
             return [
-                'message' => 'Something went wrong',
+                'message' => 'Terjadi kesalahan sistem',
                 'payload' => $th->getMessage(),
                 'status'  => CoreConstants::STATUS_CODE_ERROR
             ];

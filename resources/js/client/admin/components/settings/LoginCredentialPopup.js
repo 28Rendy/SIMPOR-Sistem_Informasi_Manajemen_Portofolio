@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { Drawer, Input, Button, Form, Spin } from 'antd';
 import styled from 'styled-components';
 import HTTP from '../../../common/helpers/HTTP';
@@ -91,7 +91,7 @@ const LoginCredentialPopup = (props) => {
 
     return (
         <StyledDrawer
-            title="Login Credential"
+            title="Kredensial Masuk Admin"
             onClose={handleClose}
             visible={visible}
             destroyOnClose={true}
@@ -124,58 +124,58 @@ const LoginCredentialPopup = (props) => {
                     </Form.Item>
                     <Form.Item
                         name="email"
-                        label="Email"
+                        label="Alamat Email"
                         rules={[
                             {
                                 required: true,
-                                message: 'Please enter your email'
+                                message: 'Silakan masukkan email Anda'
                             },
                             {
                                 type: 'email',
-                                message: 'Invalid email address'
+                                message: 'Format email tidak valid'
                             }
                         ]}
                     >
-                        <Input placeholder="Email"/>
+                        <Input placeholder="Masukkan Email"/>
                     </Form.Item>
                     <Form.Item
                         name="password"
-                        label="Password"
+                        label="Kata Sandi Baru"
                         rules={[
                             {
                                 required: true,
-                                message: 'Please enter your password'
+                                message: 'Silakan masukkan kata sandi'
                             },
                             {
                                 min: 5,
-                                message: 'The password is too short'
+                                message: 'Kata sandi terlalu pendek (min. 5 karakter)'
                             },
                         ]}
                         hasFeedback
                     >
-                        <Input.Password placeholder="New Password"/>
+                        <Input.Password placeholder="Masukkan Kata Sandi Baru"/>
                     </Form.Item>
                     <Form.Item
                         name="confirmPassword"
-                        label="Confirm Password"
+                        label="Konfirmasi Kata Sandi"
                         dependencies={['password']}
                         rules={[
                             {
                                 required: true,
-                                message: 'Please confirm your password',
+                                message: 'Silakan konfirmasi kata sandi Anda',
                             },
                             ({ getFieldValue }) => ({
                                 validator(rule, value) {
                                 if (!value || getFieldValue('password') === value) {
                                     return Promise.resolve();
                                 }
-                                return Promise.reject('Confirm password does not match');
+                                return Promise.reject('Konfirmasi kata sandi tidak cocok');
                                 },
                             }),
                         ]}
                         hasFeedback
                     >
-                        <Input.Password placeholder="Confirm Password"/>
+                        <Input.Password placeholder="Ulangi Kata Sandi Baru"/>
                     </Form.Item>
                 </Form>
             </Spin>

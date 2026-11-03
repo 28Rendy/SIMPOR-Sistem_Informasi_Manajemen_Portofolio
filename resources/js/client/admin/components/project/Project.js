@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { Drawer, Button, Spin, Input, Form, Select, Modal, Upload } from 'antd';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -242,7 +242,7 @@ const Project = (props) => {
                             },
                         ]}
                     >
-                        <Input placeholder="Enter Title"/>
+                        <Input placeholder="Masukkan Judul"/>
                     </Form.Item>
                     <Form.Item
                         name="categories"
@@ -257,7 +257,7 @@ const Project = (props) => {
                         <Select
                             mode="tags"
                             allowClear
-                            placeholder="Select Existing or Create New"
+                            placeholder="Pilih Kategori atau Buat Baru"
                         >
                             {props.categories.map((category, index) => (
                                 <Option key={index} value={category}>{category}</Option>
@@ -315,13 +315,13 @@ const Project = (props) => {
                             },
                         ]}
                     >
-                        <Input placeholder="Enter Link"/>
+                        <Input placeholder="Masukkan Tautan"/>
                     </Form.Item>
                     <Form.Item 
                         name="details" 
                         label="Details"
                     >
-                        <Input.TextArea rows={4} placeholder="Enter Details"/>
+                        <Input.TextArea rows={4} placeholder="Masukkan Detail"/>
                     </Form.Item>
                 </Form>
                 <Modal

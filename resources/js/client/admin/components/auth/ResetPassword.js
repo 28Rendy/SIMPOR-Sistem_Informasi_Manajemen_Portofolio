@@ -1,4 +1,4 @@
-import { Button, Space, Form, Input } from 'antd';
+﻿import { Button, Space, Form, Input } from 'antd';
 import React, { useEffect, useState } from 'react';
 import AuthLayout from './AuthLayout';
 import axios from 'axios';
@@ -19,7 +19,7 @@ const ResetPassword = () => {
     let location = useLocation();
 
     useEffect(() => {
-        document.title = `Reset Password - ${siteName}`;
+        document.title = `Atur Ulang Kata Sandi - ${siteName}`;
     }, [])
 
     useEffect(() => {
@@ -53,7 +53,7 @@ const ResetPassword = () => {
 
     return (
         <React.Fragment>
-            <AuthLayout title={'RESET PASSWORD'}>
+            <AuthLayout title={'ATUR ULANG KATA SANDI'}>
                 <Form
                     name="resetPassword"
                     onFinish={onSubmit}
@@ -63,11 +63,11 @@ const ResetPassword = () => {
                         rules={[
                             {
                                 required: true,
-                                message: 'Please enter your email'
+                                message: 'Silakan masukkan email Anda'
                             },
                             {
                                 type: 'email',
-                                message: 'Invalid email address'
+                                message: 'Format alamat email tidak valid'
                             }
                         ]}
                     >
@@ -79,16 +79,16 @@ const ResetPassword = () => {
                         rules={[
                             {
                                 required: true,
-                                message: 'Please enter your new password'
+                                message: 'Silakan masukkan kata sandi baru'
                             },
                             {
                                 min: 5,
-                                message: 'The password is too short'
+                                message: 'Kata sandi terlalu pendek'
                             },
                         ]}
                         hasFeedback
                     >
-                        <Input.Password prefix={<BsShieldLock />} placeholder="New Password"/>
+                        <Input.Password prefix={<BsShieldLock />} placeholder="Kata Sandi Baru"/>
                     </Form.Item>
 
                     <Form.Item
@@ -97,20 +97,20 @@ const ResetPassword = () => {
                         rules={[
                             {
                                 required: true,
-                                message: 'Please enter your new password',
+                                message: 'Silakan masukkan kata sandi baru',
                             },
                             ({ getFieldValue }) => ({
                                 validator(rule, value) {
                                     if (!value || getFieldValue('password') === value) {
                                         return Promise.resolve();
                                     }
-                                    return Promise.reject('Confirm password does not match');
+                                    return Promise.reject('Konfirmasi kata sandi tidak cocok');
                                 },
                             }),
                         ]}
                         hasFeedback
                     >
-                        <Input.Password prefix={<BsShieldLock />} placeholder="Confirm Password"/>
+                        <Input.Password prefix={<BsShieldLock />} placeholder="Konfirmasi Kata Sandi"/>
                     </Form.Item>
 
                     <Form.Item>
@@ -120,7 +120,7 @@ const ResetPassword = () => {
                             </Button>
                             
                             <Button type="default" htmlType="button" block disabled={loading}>
-                                <Link to={Routes.web.admin.login}>Back to Login</Link>
+                                <Link to={Routes.web.admin.login}>Kembali ke Masuk</Link>
                             </Button>
                         </Space>
                     </Form.Item>

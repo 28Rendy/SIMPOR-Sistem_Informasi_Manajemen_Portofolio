@@ -1,4 +1,4 @@
-<!--
+﻿<!--
 
 =========================================================
 * startbootstrap-resume - v6.0.1
@@ -89,25 +89,25 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav">
                 @if ($portfolioConfig['visibility']['about'])
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Tentang</a></li>
                 @endif
                 @if ($portfolioConfig['visibility']['experiences'])
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Pengalaman</a></li>
                 @endif
                 @if ($portfolioConfig['visibility']['education'])
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Pendidikan</a></li>
                 @endif
                 @if ($portfolioConfig['visibility']['skills'])
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Keahlian</a></li>
                 @endif
                 @if ($portfolioConfig['visibility']['projects'])
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#projects">Proyek</a></li>
                 @endif
                 @if ($portfolioConfig['visibility']['services'])
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Services</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#services">Layanan</a></li>
                 @endif
                 @if ($portfolioConfig['visibility']['contact'])
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#contact">Kontak</a></li>
                 @endif
             </ul>
         </div>
@@ -130,7 +130,7 @@
                     </p>
                     @if ($portfolioConfig['visibility']['cv'])
                         <div class="mb-3">
-                            <a href="{{$about->cv}}" class="btn btn-light btn-sm" download>Download CV</a>
+                            <a href="{{$about->cv}}" class="btn btn-light btn-sm" download>Unduh CV</a>
                         </div>
                     @endif
                     <p class="lead mb-5">{{ $about->description }}</p>
@@ -151,7 +151,7 @@
             <!-- Experience-->
             <section class="resume-section" id="experience">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Experience</h2>
+                    <h2 class="mb-5">Pengalaman</h2>
                     @if ($experiences)
                         @foreach ($experiences as $experience)
                             <div class="d-flex flex-column flex-md-row justify-content-between mb-5" data-aos="fade-up">
@@ -172,7 +172,7 @@
             <!-- Education-->
             <section class="resume-section" id="education">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Education</h2>
+                    <h2 class="mb-5">Pendidikan</h2>
                     @if ($education)
                         @foreach ($education as $value)
                             <div class="d-flex flex-column flex-md-row justify-content-between mb-5" data-aos="fade-up">
@@ -194,7 +194,7 @@
             <!-- Skills-->
             <section class="resume-section" id="skills">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Skills</h2>
+                    <h2 class="mb-5">Keahlian</h2>
                     <div class="row"> 
                          @if (!empty($skills))
                             @foreach ($skills as $skill)
@@ -233,7 +233,7 @@
             <!-- projects-->
             <section class="resume-section" id="projects">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Projects</h2>
+                    <h2 class="mb-5">Proyek</h2>
                     <div 
                         id="react-project-root" 
                         data-accentcolor="{{$accentColor}}" 
@@ -248,7 +248,7 @@
             <!-- Services-->
             <section class="resume-section" id="services">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Services</h2>
+                    <h2 class="mb-5">Layanan</h2>
                     <div class="row"> 
                          @if (!empty($services))
                             @foreach ($services as $service)
@@ -275,7 +275,7 @@
             <!-- contact-->
             <section class="resume-section" id="contact" data-aos="zoom-in">
                 <div class="resume-section-content">
-                    <h2 class="mb-5">Contact</h2>
+                    <h2 class="mb-5">Hubungi Saya</h2>
                     <div class="card border-0 mb-0">
                         <div class="row">
                             <div class="col-md-6">
@@ -288,34 +288,34 @@
                                         <div class="row mb-3">
                                             <div class="col">
                                                 <div class="form-group">
-                                                    <input class="form-control" type="text" id="name" name="name" placeholder="Name" required="">
+                                                    <input class="form-control" type="text" id="name" name="name" placeholder="Nama Anda" required="">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col">
                                                 <div class="form-group">
-                                                    <input class="form-control" type="text" id="subject" name="subject" placeholder="Subject" required="">
+                                                    <input class="form-control" type="text" id="subject" name="subject" placeholder="Subjek Pesan" required="">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col">
                                                 <div class="form-group">
-                                                    <input class="form-control" type="email" id="email" name="email" placeholder="E-mail" required="">
+                                                    <input class="form-control" type="email" id="email" name="email" placeholder="Email Anda" required="">
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row mb-3">
                                             <div class="col">
                                                 <div class="form-group">
-                                                    <textarea class="form-control" id="body" name="body" placeholder="Body" required=""></textarea>
+                                                    <textarea class="form-control" id="body" name="body" placeholder="Tulis pesan Anda..." required=""></textarea>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="row">
                                             <div class="col">
-                                                <button type="submit" class="submit-button">Send Message</button>
+                                                <button type="submit" class="submit-button">Kirim Pesan</button>
                                             </div>
                                         </div>
                                     </form>
@@ -324,7 +324,7 @@
                             <div class="col-md-6">
                                 <div class="card-body">
                                     @if ($about->address)
-                                        <p class="mb-0"><strong>Address</strong></p>
+                                        <p class="mb-0"><strong>Alamat</strong></p>
                                         <p class="pb-2 text-muted">{{$about->address }}</p>
                                     @endif
                                     @if ($about->email)
@@ -332,7 +332,7 @@
                                         <p class="pb-2 text-muted">{{$about->email }}</p>
                                     @endif
                                     @if ($about->phone)
-                                        <p class="mb-0"><strong>Phone</strong></p>
+                                        <p class="mb-0"><strong>Telepon</strong></p>
                                         <p class="pb-2 text-muted">{{$about->phone }}</p>
                                     @endif
                                     @if ($portfolioConfig['visibility']['cv'])
@@ -360,7 +360,7 @@
         @if ($portfolioConfig['visibility']['footer'])
             <footer class="footer">
                 <div class="h4 title text-center text-muted">{{$about->name}}</div>
-                <div class="text-center text-muted"><p>©{{ now()->year }} All rights reserved.</p></div>
+                <div class="text-center text-muted"><p>©{{ now()->year }} Hak cipta dilindungi undang-undang.</p></div>
             </footer>
         @endif
     </div>
@@ -423,7 +423,7 @@
 
                     button.attr('disabled', true);
                     button.html(`<span class="content">
-                        Sending <i class="fas fa-spinner fa-spin"></i>
+                        Mengirimkan <i class="fas fa-spinner fa-spin"></i>
                     </span>`);
 
                     $.ajax({
@@ -452,7 +452,7 @@
                         complete: function(data) {
                             button.attr('disabled', false);
                             button.html(`<span class="content">
-                                Send <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
+                                Kirim <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M476 3.2L12.5 270.6c-18.1 10.4-15.8 35.6 2.2 43.2L121 358.4l287.3-253.2c5.5-4.9 13.3 2.6 8.6 8.3L176 407v80.5c0 23.6 28.5 32.9 42.5 15.8L282 426l124.6 52.2c14.2 6 30.4-2.9 33-18.2l72-432C515 7.8 493.3-6.8 476 3.2z">
                                     </path>
                                 </svg>
@@ -462,7 +462,7 @@
                 }
             });
             
-            function showNotification(message = 'Something went wrong', type = 'error', sticky = false) {
+            function showNotification(message = 'Terjadi kesalahan', type = 'error', sticky = false) {
                 iziToast.show({
                     title: '',
                     message: message,

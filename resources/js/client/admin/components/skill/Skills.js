@@ -1,4 +1,4 @@
-import { Button, Menu, PageHeader, Space, Dropdown, Modal, Progress, Typography } from 'antd';
+﻿import { Button, Menu, PageHeader, Space, Dropdown, Modal, Progress, Typography } from 'antd';
 import React, { useRef, useState } from 'react';
 import PageWrapper from '../layout/PageWrapper';
 import ProTable from '@ant-design/pro-table';
@@ -26,7 +26,7 @@ const Skills = () => {
             ellipsis:true
         },
         {
-            title: 'Proficiency',
+            title: 'Kemahiran (%)',
             dataIndex: 'proficiency',
             align: 'center',
             sorter: true,
@@ -45,7 +45,7 @@ const Skills = () => {
             ],
         },
         {
-            title: 'Option',
+            title: 'Aksi',
             valueType: 'option',
             align: 'center',
             width: 170,
@@ -53,7 +53,7 @@ const Skills = () => {
             render: (text, row) => [
                 <Dropdown key="0" overlay={menu(row)} trigger={['click']}>
                     <a className="ant-dropdown-link" onClick={e => e.preventDefault()}>
-                        Option <DownOutlined />
+                        Aksi <DownOutlined />
                     </a>
                 </Dropdown>,
             ],
@@ -67,7 +67,7 @@ const Skills = () => {
         });
         confirm({
             confirmLoading: loading,
-            title: `Do you want to delete ${ids.length == 1 ? 'this' : 'these'} ${ids.length == 1 ? 'item' : 'items'}?`,
+            title: `Apakah Anda yakin ingin menghapus ${ids.length == 1 ? 'data ini' : 'data yang dipilih'}?`,
             icon: <ExclamationCircleOutlined />,
             mask: true,
             onOk() {
@@ -150,21 +150,21 @@ const Skills = () => {
                         tableAlertRender={({ selectedRowKeys, onCleanSelected }) => (
                             <Space>
                                 <span>
-                                    Selected {selectedRowKeys.length} items
+                                    Terpilih {selectedRowKeys.length} data
                                     <a
                                         style={{
                                             marginLeft: 8,
                                         }}
                                         onClick={onCleanSelected}
                                     >
-                                        <strong>Cancel Selection</strong>
+                                        <strong>Batalkan Pilihan</strong>
                                     </a>
                                 </span>
                             </Space>
                         )}
                         tableAlertOptionRender={({ selectedRows }) => (
                             <Space>
-                                <Button type="primary" onClick={() => showConfirm(selectedRows)}>Batch Deletion</Button>
+                                <Button type="primary" onClick={() => showConfirm(selectedRows)}>Hapus Sekaligus</Button>
                             </Space>
                         )}
                         actionRef={actionRef}

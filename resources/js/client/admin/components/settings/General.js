@@ -1,4 +1,4 @@
-import { List, PageHeader, Typography, Spin } from 'antd';
+﻿import { List, PageHeader, Typography, Spin } from 'antd';
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import Utils from '../../../common/helpers/Utils';
@@ -123,7 +123,7 @@ const General = (props) => {
     return (
         <React.Fragment>
             <PageHeader
-                title="General Settings"
+                title="Pengaturan Umum"
             >
                 <List
                     itemLayout="horizontal"
@@ -134,7 +134,7 @@ const General = (props) => {
                             <a key="login-credentials-change" onClick={(e) => {
                                 e.preventDefault();
                                 if (props.globalState.demoMode) {
-                                    Utils.showNotification('This feature is disabled in demo', 'warning');
+                                    Utils.showNotification('Fitur ini dinonaktifkan dalam mode demo', 'warning');
                                 } else {
                                     setLoginCredentialVisible(true);
                                 }
@@ -143,7 +143,7 @@ const General = (props) => {
                             </a>,
                         ]}
                     >
-                        <Item.Meta title={'Login Credentials'} description={'Change your login credentials.'} />
+                        <Item.Meta title={'Kredensial Masuk'} description={'Ubah email dan kata sandi masuk admin.'} />
                     </StyledListItem>
                     <Spin delay={500} size="small" spinning={loading && currentSettingToChange === CoreConstants.settings.SITE_NAME}>
                         <StyledListItem actions={(siteName && props.globalState.siteName !== siteName) && (
@@ -156,11 +156,11 @@ const General = (props) => {
                                 </a>,
                             ]
                         )}>
-                            <Item.Meta title={'App Name'} description={changeSiteName}/>
+                            <Item.Meta title={'Nama Aplikasi'} description={changeSiteName}/>
                         </StyledListItem>
                     </Spin>
                     <StyledListItem style={{padding: '16px 0px'}}>
-                        <Item.Meta title={'App Logo'} description={changeLogo}/>
+                        <Item.Meta title={'Logo Aplikasi'} description={changeLogo}/>
                     </StyledListItem>
                     <StyledListItem style={{padding: '16px 0px'}}>
                         <Item.Meta title={'Favicon'} description={changeFavicon}/>

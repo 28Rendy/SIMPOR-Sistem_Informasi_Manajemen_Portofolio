@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { Drawer, Button, Spin, Input, Form } from 'antd';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -132,10 +132,10 @@ const Experience = (props) => {
                             },
                         ]}
                     >
-                        <Input placeholder="Enter Company"/>
+                        <Input placeholder="Masukkan Nama Perusahaan"/>
                     </Form.Item>
                     <Form.Item name="period" label="Period">
-                        <Input placeholder="Enter Period"/>
+                        <Input placeholder="Masukkan Periode (contoh: 2018 - 2022)"/>
                     </Form.Item>
                     <Form.Item
                         name="position"
@@ -147,10 +147,10 @@ const Experience = (props) => {
                             },
                         ]}
                     >
-                        <Input placeholder="Enter Position"/>
+                        <Input placeholder="Masukkan Posisi / Jabatan"/>
                     </Form.Item>
                     <Form.Item name="details" label="Details">
-                        <Input.TextArea rows={4} placeholder="Enter Details"/>
+                        <Input.TextArea rows={4} placeholder="Masukkan Detail"/>
                     </Form.Item>
                 </Form>
             </Spin>

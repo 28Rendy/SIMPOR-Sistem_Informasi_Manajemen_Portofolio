@@ -1,4 +1,4 @@
-import { PageHeader, Radio, List, Spin } from 'antd';
+﻿import { PageHeader, Radio, List, Spin } from 'antd';
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { setGlobalState } from '../../redux/ActionCreators';
@@ -121,7 +121,7 @@ const Themes = (props) => {
     return (
         <React.Fragment>
             <PageHeader
-                title="Theme Settings"
+                title="Pengaturan Tema"
             >
                 <List
                     itemLayout="horizontal"
@@ -140,7 +140,7 @@ const Themes = (props) => {
                                 </a>,
                             ]
                         }>
-                            <Item.Meta title={'Accent Color'} description={'Change accent color of admin portion.'} />
+                            <Item.Meta title={'Warna Aksen'} description={'Ubah warna aksen tampilan admin.'} />
                         </StyledListItem>
                     </Spin>
                     <Spin delay={500} size="small" spinning={loading && currentSettingToChange === CoreConstants.settings.MENU_LAYOUT}>
@@ -175,8 +175,8 @@ const Themes = (props) => {
                                             size="small"
                                             options={
                                                 [
-                                                    { label: 'Short', value: true },
-                                                    { label: 'Full', value: false },
+                                                    { label: 'Ringkas', value: true },
+                                                    { label: 'Penuh', value: false },
                                                 ]
                                             }
                                             onChange={shortMenuChangeHandle}
@@ -186,7 +186,7 @@ const Themes = (props) => {
                                         />
                                     ]
                                 }>
-                                    <Item.Meta title={'Menu Size'} description={'Change default menu size.'} />
+                                    <Item.Meta title={'Ukuran Menu'} description={'Ubah ukuran bawaan sidebar menu.'} />
                                 </StyledListItem>
                             </Spin>
                         )
@@ -199,8 +199,8 @@ const Themes = (props) => {
                                     size="small"
                                     options={
                                         [
-                                            { label: 'Dark', value: 'dark' },
-                                            { label: 'Light', value: 'light' },
+                                            { label: 'Gelap', value: 'dark' },
+                                            { label: 'Terang', value: 'light' },
                                         ]
                                     }
                                     onChange={menuColorChangeHandle}
@@ -210,7 +210,7 @@ const Themes = (props) => {
                                 />
                             ]
                         }>
-                            <Item.Meta title={'Menu Layout'} description={'Change menu color.'} />
+                            <Item.Meta title={'Warna Menu'} description={'Ubah skema warna sidebar menu.'} />
                         </StyledListItem>
                     </Spin>
                     {
@@ -223,8 +223,8 @@ const Themes = (props) => {
                                             size="small"
                                             options={
                                                 [
-                                                    { label: 'Dark', value: 'dark' },
-                                                    { label: 'Light', value: 'light' },
+                                                    { label: 'Gelap', value: 'dark' },
+                                                    { label: 'Terang', value: 'light' },
                                                 ]
                                             }
                                             onChange={navColorChangeHandle}
@@ -234,7 +234,7 @@ const Themes = (props) => {
                                         />
                                     ]
                                 }>
-                                    <Item.Meta title={'Nav Bar Color'} description={'Change nav color.'} />
+                                    <Item.Meta title={'Warna Navigasi Bar'} description={'Ubah skema warna bar navigasi atas.'} />
                                 </StyledListItem>
                             </Spin>
                         )

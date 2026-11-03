@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { Card, Col, Row, Radio, Spin, Image, PageHeader, List, Typography, Switch } from 'antd';
 import Utils from '../../../common/helpers/Utils';
 import styled from 'styled-components';
@@ -135,7 +135,7 @@ const Basic = (props) => {
                                 onChange: setGoogleAnalyticsId,
                             }}
                         >
-                            <Text type='secondary'>Click here to set google analytic id</Text>
+                            <Text type='secondary'>Klik di sini untuk mengisi Google Analytics ID</Text>
                         </Paragraph>
                     </React.Fragment>
                 )
@@ -213,7 +213,7 @@ const Basic = (props) => {
                 >
                     <Spin delay={500} size="small" spinning={loading && currentSettingToChange === CoreConstants.portfolioConfig.TEMPLATE}>
                         <StyledListItem style={{padding: '16px 0px'}}>
-                            <Item.Meta title={'Portfolio Template'} description={changeTemplate}/>
+                            <Item.Meta title={'Template Portofolio'} description={changeTemplate}/>
                         </StyledListItem>
                     </Spin>
                     <Spin delay={500} size="small" spinning={loading && currentSettingToChange === CoreConstants.portfolioConfig.ACCENT_COLOR}>
@@ -229,7 +229,7 @@ const Basic = (props) => {
                                 </a>,
                             ]
                         }>
-                            <Item.Meta title={'Portfolio Accent Color'} description={'Change accent color of frontend.'} />
+                            <Item.Meta title={'Warna Aksen Portofolio'} description={'Ubah warna aksen halaman depan (frontend).'} />
                         </StyledListItem>
                     </Spin>
                     <Spin delay={500} size="small" spinning={loading && currentSettingToChange === CoreConstants.portfolioConfig.GOOGLE_ANALYTICS_ID}>
@@ -256,7 +256,7 @@ const Basic = (props) => {
                             </a>,
                         ]
                     }>
-                        <Item.Meta title={'SEO'} description={'Search engine optimization of frontend.'} />
+                        <Item.Meta title={'SEO'} description={'Optimasi mesin pencari (SEO) halaman depan.'} />
                     </StyledListItem>
                     <Spin delay={500} size="small" spinning={loading && currentSettingToChange === CoreConstants.portfolioConfig.MAINTENANCE_MODE}>
                         <StyledListItem actions={[
@@ -269,7 +269,7 @@ const Basic = (props) => {
                                 onChange={maintenanceModeOnChange}
                             />
                         ]}>
-                            <Item.Meta title={'Maintenance Mode'} description={'Set maintenance mode of frontend.'}/>
+                            <Item.Meta title={'Mode Pemeliharaan'} description={'Aktifkan mode pemeliharaan (tutup sementara website).'}/>
                         </StyledListItem>
                     </Spin>
                 </List>

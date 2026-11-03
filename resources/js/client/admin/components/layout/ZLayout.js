@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import ProLayout from '@ant-design/pro-layout';
 import { useHistory, useLocation } from 'react-router-dom';
 import { useSelector } from 'react-redux';
@@ -37,7 +37,7 @@ const ZLayout = ({ children }) => {
 
     const optimizeOnClick = () => {
         message.loading({
-            content: 'Action in progress..',
+            content: 'Sedang memproses..',
             duration: 0,
             key: 'optimize'
         });
@@ -81,76 +81,76 @@ const ZLayout = ({ children }) => {
                 },
                 {
                     path: 'portfolio',
-                    name: 'Portfolio',
+                    name: 'Portofolio',
                     icon: <ExperimentOutlined />,
                     routes: [
                         {
                             path: Routes.web.admin.portfolioConfig,
                             key: Routes.web.admin.portfolioConfig,
-                            name: 'Config',
+                            name: 'Konfigurasi',
                         },
                         {
                             path: Routes.web.admin.portfolioAbout,
                             key: Routes.web.admin.portfolioAbout,
-                            name: 'About',
+                            name: 'Tentang',
                         },
                         {
                             path: Routes.web.admin.portfolioSkills,
                             key: Routes.web.admin.portfolioSkills,
-                            name: 'Skill',
+                            name: 'Keahlian',
                         },
                         {
                             path: Routes.web.admin.portfolioEducation,
                             key: Routes.web.admin.portfolioEducation,
-                            name: 'Education',
+                            name: 'Pendidikan',
                         },
                         {
                             path: Routes.web.admin.portfolioExperiences,
                             key: Routes.web.admin.portfolioExperiences,
-                            name: 'Experience',
+                            name: 'Pengalaman',
                         },
                         {
                             path: Routes.web.admin.portfolioProjects,
                             key: Routes.web.admin.portfolioProjects,
-                            name: 'Project',
+                            name: 'Proyek',
                         },
                         {
                             path: Routes.web.admin.portfolioServices,
                             key: Routes.web.admin.portfolioServices,
-                            name: 'Service',
+                            name: 'Layanan',
                         },
                     ],
                 },
                 {
                     path: Routes.web.admin.visitors,
                     key: Routes.web.admin.visitors,
-                    name: 'Visitor',
+                    name: 'Pengunjung',
                     icon: <TeamOutlined/>,
                 },
                 {
                     path: Routes.web.admin.messages,
                     key: Routes.web.admin.messages,
-                    name: 'Message',
+                    name: 'Pesan',
                     icon: <MailOutlined/>,
                 },
                 {
                     path: Routes.web.frontend.optimize,
                     key: Routes.web.frontend.optimize,
-                    name: 'Optimize',
+                    name: 'Optimalkan',
                     onclickHandle: optimizeOnClick,
                     icon: <ThunderboltOutlined/>,
                 },
                 {
                     path: Routes.web.admin.systemLogs,
                     key: Routes.web.admin.systemLogs,
-                    name: 'System Logs',
+                    name: 'Log Sistem',
                     onclickHandle: () => { window.open(Routes.web.admin.systemLogs) },
                     icon: <FileTextOutlined/>,
                 },
                 {
                     path: Routes.web.admin.settings,
                     key: Routes.web.admin.settings,
-                    name: 'Settings',
+                    name: 'Pengaturan',
                     icon: <ControlOutlined />,
                 },
             ]

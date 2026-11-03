@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { Modal } from 'antd';
 import { BlockPicker } from 'react-color';
 import PropTypes from 'prop-types';

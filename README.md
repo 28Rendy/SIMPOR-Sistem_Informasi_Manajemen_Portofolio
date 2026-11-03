@@ -1,11 +1,11 @@
-<p align="center">
-  <a href="http://arifszn.github.io/ezfolio" target="_blank">
-    <img src="https://arifszn.github.io/ezfolio/img/short-logo.png" alt="Ezfolio" title="Ezfolio" width="80">
+﻿<p align="center">
+  <a href="https://github.com/28Rendy/SIMPOR-Sistem_Informasi_Manajemen_Portofolio" target="_blank">
+    <img src="https://arifszn.github.io/ezfolio/img/short-logo.png" alt="SIMPOR" title="SIMPOR" width="80">
   </a>
 </p>
 
-<h1 align="center">Ezfolio</h1>
-<p align="center">Open Source Portfolio CMS</p>
+<h1 align="center">SIMPOR</h1>
+<p align="center">Sistem Informasi Manajemen Portofolio</p>
 
 <p align="center">
     <a href="https://laravel.com/"><img src="https://img.shields.io/badge/laravel-8-blue" alt="laravel 8"></a>
@@ -23,39 +23,77 @@
     <br/>
 </p>
 
-<span className="keyword">Ezfolio</span> is a professional open source portfolio CMS built using <b>Laravel</b>, <b>React</b> and <b>Ant Design</b>. Choose from awesome templates and control what you like to show your audience. It offers a minimalist admin interface with lots of option for customizations. Get all the features of a portfolio site including visitor tracking, google analytics, maintenance mode, contact form, SEO and many more. 
+---
 
-This project can be used as a guide for learning Laravel with React and making a SPA.
+## 🛡️ Pernyataan Orisinalitas & Penafian (Disclaimer)
 
-- Made with Laravel, React and Ant Design
+Proyek ini merupakan **karya turunan (*derived work*) yang dimodifikasi** dari proyek sumber terbuka (*open-source*) bernama **[Ezfolio](https://github.com/arifszn/ezfolio)** yang dikembangkan oleh **arifszn**. Proyek asli dilisensikan di bawah **Lisensi MIT**, yang mengizinkan modifikasi dan penggunaan kembali secara bebas.
+
+### 📌 Tujuan Proyek
+Pengembangan dan modifikasi pada repositori ini dilakukan oleh **Rendy** dengan tujuan:
+* **Portofolio Pribadi:** Sebagai materi unjuk kerja dan demonstrasi keterampilan teknis dalam pengembangan *Full-Stack Developer*.
+* **Eksplorasi Teknis:** Mempelajari arsitektur integrasi sistem, penyesuaian fungsionalitas, serta pengelolaan kode berbasis *open-source*.
+
+### 🛠️ Kontribusi & Perubahan yang Dilakukan
+Seluruh hak cipta atas struktur dasar kode, logika bawaan, dan lisensi awal tetap menjadi milik pengembang asli (**arifszn**). Namun, dalam repositori ini, saya telah melakukan beberapa perubahan dan kustomisasi personal, yang meliputi:
+* *(Silakan tulis poin perubahan Anda di sini, contoh: Redesain tema antarmuka ke Dark Gaming Theme)*
+* *(Contoh: Penyesuaian rute navigasi dan pembaruan UI halaman login/register)*
+* *(Contoh: Implementasi fitur analitik atau pembersihan riwayat git untuk portofolio mandiri)*
+
+Saya sangat menghormati hak kekayaan intelektual dan komunitas *open-source*. Oleh karena itu, lisensi asli (`LICENSE`) tetap dipertahankan di dalam repositori ini sebagai bentuk kepatuhan hukum dan etika.
+
+---
+
+**SIMPOR** (*Sistem Informasi Manajemen Portofolio*) adalah CMS portofolio berbasis proyek *open-source* **Ezfolio**, dibangun menggunakan **Laravel**, **React**, dan **Ant Design**. Pilih dari berbagai template keren dan kendalikan apa yang ingin Anda tampilkan ke audiens. Menawarkan antarmuka admin minimalis dengan banyak opsi kustomisasi. Dapatkan semua fitur situs portofolio termasuk pelacak pengunjung, Google Analytics, mode maintenance, formulir kontak, SEO, dan masih banyak lagi.
+
+- Dibangun dengan Laravel, React dan Ant Design
 - JWT Authentication
 - Single Page Application
-- Modern and Responsive Design
-- Multiple Templates
-- Theme Color Customization
+- Desain Modern dan Responsif
+- Berbagai Template
+- Kustomisasi Warna Tema
 - Custom Scripting
-- Visitor Tracking
-- Location Tracking
+- Pelacak Pengunjung
+- Pelacak Lokasi
 - Google Analytics
-- Maintenance Mode
-- Contact Form
-- Search Engine Optimization
-- Section Visibility
-- And Much More…
+- Mode Maintenance
+- Formulir Kontak
+- Search Engine Optimization (SEO)
+- Kontrol Visibilitas Section
+- Dan Masih Banyak Lagi…
 
 > Client: https://github.com/arifszn/ezfolio/tree/main/resources/js/client
 
 
 ## Docs
 
-Checkout the <a href="http://arifszn.github.io/ezfolio">docs</a>. 
+Lihat <a href="http://arifszn.github.io/ezfolio">dokumentasi</a> proyek asli (Ezfolio).
 
 
 ## Installation
 
-### With Docker
-- Run ```cp .env.example .env```.
-- Run the below command to install Composer dependencies:
+### Tanpa Docker
+
+- Jalankan `cp .env.example .env`
+- Jalankan `composer install` (atau `composer update` jika ada konflik versi PHP)
+- Isi nama database, username, dan password di file `.env`
+- Jalankan `php artisan migrate --seed`
+- Jalankan `php artisan storage:link`
+- Jalankan `npm install`
+- Jalankan `npm run prod` atau `npm run watch`
+- Jalankan `php artisan serve`
+
+Kredensial Admin Default:
+
+```
+Email: admin@admin.com
+Password: 12345
+```
+
+### Dengan Docker
+
+- Jalankan `cp .env.example .env`.
+- Jalankan perintah berikut untuk menginstal dependensi Composer:
     ```sh
     docker run --rm \
         -u "$(id -u):$(id -g)" \
@@ -64,30 +102,12 @@ Checkout the <a href="http://arifszn.github.io/ezfolio">docs</a>.
         laravelsail/php81-composer:latest \
         composer install --ignore-platform-reqs
     ```
-- Run ```./vendor/bin/sail up -d```.
-- Run ```./vendor/bin/sail artisan migrate --seed```. If you face error `Connection refused`, set `DB_HOST=mysql` in .env file.
-- Run ```./vendor/bin/sail npm install```.
-- Run ```./vendor/bin/sail npm run prod``` or ```./vendor/bin/sail npm run watch```.
+- Jalankan `./vendor/bin/sail up -d`.
+- Jalankan `./vendor/bin/sail artisan migrate --seed`. Jika muncul error `Connection refused`, set `DB_HOST=mysql` di file `.env`.
+- Jalankan `./vendor/bin/sail npm install`.
+- Jalankan `./vendor/bin/sail npm run prod` atau `./vendor/bin/sail npm run watch`.
 
-`sail` is equivalent of `docker-compose`, read [`laravel/sail`](https://laravel.com/docs/8.x/sail) doc.
-
-
-### Without Docker
-
-- Run ```cp .env.example .env```
-- Run ```composer install```
-- Provide db name, username and password in .env
-- Run ```php artisan migrate --seed```
-- Run ```npm install```
-- Run ```npm run prod``` or ```npm run watch```
-- Run ```php aritsan serve```
-
-Admin credentials:
-
-```
-Email: admin@admin.com
-Password: 12345
-```
+`sail` adalah ekuivalen dari `docker-compose`, baca dokumentasi [`laravel/sail`](https://laravel.com/docs/8.x/sail).
 
 For more info, visit the <a href="http://arifszn.github.io/ezfolio">docs</a>.
 
@@ -115,18 +135,6 @@ For more info, visit the <a href="http://arifszn.github.io/ezfolio">docs</a>.
 <kbd><img src="https://arifszn.github.io/ezfolio/img/assets/screenshots/vega.png" alt="Vega"/></kbd>
 
 
-## Contributing
-
-Any contributors who want to make this project better can make contributions, which will be greatly appreciated. Check out our <a href="https://github.com/arifszn/ezfolio/blob/main/CONTRIBUTING.md">contribution guide</a> for more info.
-
-
-## Support
-
-<a href="https://www.buymeacoffee.com/arifszn" target="_blank">
-  <img src="https://raw.githubusercontent.com/arifszn/arifszn/main/assets/bmc-button.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" >
-</a>
-
-
 ## License
 
-**Ezfolio** is licensed under the [MIT License](https://github.com/arifszn/ezfolio/blob/main/LICENSE).
+**SIMPOR** adalah karya turunan dari **Ezfolio** yang dilisensikan di bawah [Lisensi MIT](https://github.com/arifszn/ezfolio/blob/main/LICENSE).

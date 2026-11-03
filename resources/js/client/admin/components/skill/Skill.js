@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+﻿import React, { useEffect, useState } from 'react';
 import { Drawer, Button, Spin, Input, Form, Slider } from 'antd';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
@@ -131,7 +131,7 @@ const Skill = (props) => {
                             },
                         ]}
                     >
-                        <Input placeholder="Enter Skill Name"/>
+                        <Input placeholder="Masukkan Nama Keahlian"/>
                     </Form.Item>
                     <Form.Item
                         name="proficiency"
