@@ -117,27 +117,14 @@ Password: 12345
 For more info, visit the <a href="http://arifszn.github.io/ezfolio">docs</a>.
 
 
-## Screenshots
 
 ### Admin Panel
-<kbd><img src="https://arifszn.github.io/ezfolio/img/assets/screenshots/login.png" alt="Login"/></kbd>
-
-<kbd><img src="https://arifszn.github.io/ezfolio/img/assets/screenshots/dashboard.png" alt="Dashboard"/></kbd>
-
-<kbd><img src="https://arifszn.github.io/ezfolio/img/assets/screenshots/basic-config.png" alt="Config"/></kbd>
-
-<kbd><img src="https://arifszn.github.io/ezfolio/img/assets/screenshots/theme.png" alt="Theme"/></kbd>
-
-<kbd><img src="https://arifszn.github.io/ezfolio/img/assets/screenshots/visitors.png" alt="Visitors"/></kbd>
-
-<kbd><img src="https://arifszn.github.io/ezfolio/img/assets/screenshots/project.png" alt="Project"/></kbd>
+<h1 align="center">BackEnd-SIMPOR</h1>
+<img width="1920" height="935" alt="Dashboard - SIMPOR" src="https://github.com/user-attachments/assets/257833cd-1fcb-410f-8e97-137de121aea2" />
 
 ### Front
-<kbd><img src="https://arifszn.github.io/ezfolio/img/assets/screenshots/procyon.png" alt="Procyon"/></kbd>
-
-<kbd><img src="https://arifszn.github.io/ezfolio/img/assets/screenshots/rigel.png" alt="Rigel"/></kbd>
-
-<kbd><img src="https://arifszn.github.io/ezfolio/img/assets/screenshots/vega.png" alt="Vega"/></kbd>
+<h1 align="center">FrontEnd-SIMPOR</h1>
+<img width="1920" height="6387" alt="Rendy 28" src="https://github.com/user-attachments/assets/62d8f6b9-03ff-4f4a-b193-4c931deb1fa5" />
 
 
 ## License
